@@ -2,6 +2,7 @@
 import "../../css/Projects.css"
 import { useState, useEffect } from "react"
 
+import "../../../archivos/projects.JSON"
 
 export function ContenidoProjects() {
 
@@ -9,12 +10,19 @@ export function ContenidoProjects() {
 
 
     async function ObtenerProyectos() {
+
+        //@Community I've found a solution! Instead of passing the relative path, you need to pass the complete path(inside your project), like fetch("src/data/fakeData.json). Instead of using res.json(), use res.text(), and, in the last then, use JSON.parse(data)
+
         //when using Create React App, you cannot fetch local files 
         //from the src directory directly with fetch because they are not served by the web server. 
         //You would need to import them as modules instead, or move them to the public directory.
-        const response = await fetch('../../../../projects.JSON') 
-        var json = await response.json();
-        setProjects(json.list)
+        const response = await fetch("../../../archivos/projects.json") 
+        //console.log(await response.text())
+
+        var txt = await response.text();
+        //var json = await JSON.parse(txt)
+        console.log(txt)
+        //setProjects(json.list)
     }
 
     useEffect(() => {
