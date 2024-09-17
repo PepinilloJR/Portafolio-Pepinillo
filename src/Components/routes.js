@@ -7,6 +7,7 @@ export function Router() {
         <Routes >
             <Route path='/' element={<Home></Home>}></Route>
             <Route path='/Proyectos' element={<Projects></Projects>}></Route>
+            <Route path="/projects.json" exact={true} render={() => null} />
         </Routes>
     )
 
