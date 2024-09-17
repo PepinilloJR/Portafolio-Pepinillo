@@ -1,0 +1,22 @@
+.menuContainer {
+    display: flex;
+    background-color: rgb(32, 32, 32);
+    position: sticky;
+    top: 0px;
+    justify-content: center;
+    height: 25px;
+    padding: 2px;
+}
+
+.boton {
+    font-size: medium;
+    color: aqua;
+    border: none;
+    width: 100px;
+    height: 25px;
+    background-color: rgb(32, 32, 32);
+}
+
+.boton:hover {
+    border: 1px rgb(77, 77, 77) solid;
+}
