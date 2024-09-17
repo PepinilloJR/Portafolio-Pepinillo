@@ -1,5 +1,6 @@
 import "./css/Datos.css"
 import { FaInstagram, FaGithub, FaSteam, FaTelegram   } from "react-icons/fa";
+import imgSrc from '../archivos/w_FMppFo_400x400.jpg';
 
 
 export function Datos() {
@@ -7,7 +8,7 @@ export function Datos() {
     return (
         <div className="ContainerDatos" >
             <div className="Portada">
-                <img className="fotoPortada" src="../../w_FMppFo_400x400.jpg" alt="" />
+                <img className="fotoPortada" src={imgSrc} alt="" />
             </div>
 
             <div className="Redes">
