@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Portafolio-Pepinillo/static/css/main.4e0beb03.css",
+    "main.js": "/Portafolio-Pepinillo/static/js/main.63810a6e.js",
+    "static/media/Latest.webp": "/Portafolio-Pepinillo/static/media/Latest.f56f9dcfcd159d26898e.webp",
+    "static/media/w_FMppFo_400x400.jpg": "/Portafolio-Pepinillo/static/media/w_FMppFo_400x400.b07dd5556df4ad2f875a.jpg",
+    "index.html": "/Portafolio-Pepinillo/index.html",
+    "main.4e0beb03.css.map": "/Portafolio-Pepinillo/static/css/main.4e0beb03.css.map",
+    "main.63810a6e.js.map": "/Portafolio-Pepinillo/static/js/main.63810a6e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e0beb03.css",
+    "static/js/main.63810a6e.js"
+  ]
+}

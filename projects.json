@@ -1,0 +1,32 @@
+{"list":[
+    {
+      "title": "Online Cowboys game",
+      "text": "This is one of my first projects related to online games",
+      "images": [
+        {"img": "Latest.webp", "gridRow": "1", "gridColumn": "1 / 3"}, 
+        {"img": "Latest.webp", "gridRow": "2", "gridColumn": "1"}, 
+        {"img": "Latest.webp", "gridRow": "2", "gridColumn": "2"}
+    ]
+      
+    },
+    {
+      "title": "Chat Website",
+      "text": "My first functional chat using React and Express",
+      "images": [
+        {"img": "Latest.webp", "gridRow": "1", "gridColumn": "1"}, 
+        {"img": "Latest.webp", "gridRow": "2", "gridColumn": "1"}, 
+        {"img": "Latest.webp", "gridRow": "1/3", "gridColumn": "2"}
+    ]
+      
+    },
+    {
+      "title": "Chat CMD",
+      "text": "i created a a chat (again) while learning some networking with .NET",
+      "images": [
+        {"img": "Latest.webp", "gridRow": "1", "gridColumn": "1"}, 
+        {"img": "Latest.webp", "gridRow": "1", "gridColumn": "2"}, 
+        {"img": "Latest.webp", "gridRow": "2", "gridColumn": "1 / 3"}
+    ]
+      
+    }
+]}
