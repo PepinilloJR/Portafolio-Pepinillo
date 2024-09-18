@@ -14,14 +14,25 @@ export function ContenidoProjects() {
         //You would need to import them as modules instead, or move them to the public directory.
 
         // that last part doesn't seem to be the situation tho, and never forget to use the headers
+        try {
         const response = await fetch("/projects.json", {
             headers: { 
               'Accept': 'application/json' 
             }}) 
         //console.log(await response.text())
-
-        var json = await response.json();
-        setProjects(json.list)
+        
+            var json = await response.json();
+            setProjects(json.list)
+        } catch (error) {
+            const response = await fetch("https://pepinillojr.github.io/Portafolio-Pepinillo/projects.json", {
+                headers: { 
+                  'Accept': 'application/json' 
+                }}) 
+            //console.log(await response.text())
+            
+            var json = await response.json();
+            setProjects(json.list)
+        }
     }
 
     useEffect(() => {
