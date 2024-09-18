@@ -22,6 +22,18 @@
     outline: rgb(61, 61, 61) solid 1px;
 }
 
+.ProjectoContainerOpen {
+    display: flex;
+    background-color: rgb(15, 15, 15);
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-evenly;
+    transition: 0.5s;
+}
+
+
 .ProjectoFotos {
     border: 0.5px solid rgb(43, 43, 43);
     display: grid;
