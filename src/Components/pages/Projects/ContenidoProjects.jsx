@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 export function ContenidoProjects() {
 
     const [projects, setProjects] = useState([]);
-    const [selected , setSelected] = useState(false)
+    const [selected , setSelected] = useState([])
 
     async function ObtenerProyectos() {
 
@@ -32,6 +32,7 @@ export function ContenidoProjects() {
             
             var json = await response.json();
             setProjects(json.list)
+            
         }
     }
 
@@ -39,7 +40,14 @@ export function ContenidoProjects() {
         ObtenerProyectos();
     }, [])
 
+    useEffect(() => {
+        setSelected(projects.map(() => false))
+        console.log(selected)
+
+    }, [projects])
+
     if (projects.length > 0) {
+
     return (
         <div className="ProjectoBox">
             {projects.map((project,key) => {
@@ -52,7 +60,11 @@ export function ContenidoProjects() {
                 // this is because all files inside src are managed by webpack and they need to be imported
                 // meanwhile in the public folder all files are directly served and can be accessed by the url
                 return (
-                <div onClick={() => { setSelected(true) }} key={key} className={(selected ? "ProjectoContainerOpen" : "ProjectoContainer")} style={{marginLeft: "auto"}}>
+                <div onClick={() => { 
+                    const listT = selected.map((x) => x)
+                    listT[key] = !listT[key]
+                    setSelected(listT) 
+                    }} key={key} className={(selected[key] ? "ProjectoContainerOpen" : "ProjectoContainer")} style={{marginLeft: "auto"}}>
                     <div className="ProjectoTexto">
                         <div className="ProjectoTitulo">{project.title}</div>
                         {project.text}
