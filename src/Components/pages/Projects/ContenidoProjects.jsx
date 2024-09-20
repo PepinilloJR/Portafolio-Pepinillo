@@ -1,5 +1,6 @@
 
 import "../../css/Projects.css"
+import { IoCloseCircle } from "react-icons/io5";
 import { Expandido } from "./proyectoExpandido";
 import { useState, useEffect } from "react"
 
@@ -34,14 +35,17 @@ export function ContenidoProjects() {
                 // this is because all files inside src are managed by webpack and they need to be imported
                 // meanwhile in the public folder all files are directly served and can be accessed by the url
                 return (
-                    <div onClick={() => { const listT = selected.map((x) => false); listT[key] = !listT[key]; setSelected(listT) }} 
-                    key={key} className={(selected[key] ? "ProjectoContainerOpen" : "ProjectoContainer")} style={{marginLeft: "auto"}}>
+                    <div key={key} className={(selected[key] ? "ProjectoContainerOpen" : "ProjectoContainer")} style={{marginLeft: "auto"}}>
+
+                    <button key={key} onClick={() => {
+                        const listT = selected.map((x) => x); 
+                        console.log(listT)
+                        listT[key] = !listT[key]; 
+                        setSelected(listT); 
+                    }} className={selected[key] ? "BotonCerrarO" : "BotonCerrarC"}><IoCloseCircle></IoCloseCircle></button>
 
 
-                    <button key={key} className={selected[key] ? "BotonCerrarO" : "BotonCerrarC"}>Cerrar</button>
-
-
-                    <div key={`keyBox${key}`} className="ProjectoBox" > 
+                    <div onClick={() => { const listT = selected.map((x) => false); listT[key] = !listT[key]; setSelected(listT); console.log("xdxdxd") }} key={`keyBox${key}`} className="ProjectoBox" > 
                         <div key={key} className="ProjectoTexto">
                             <div key={key} className="ProjectoTitulo">{project.title}</div>
                                 {project.text}
