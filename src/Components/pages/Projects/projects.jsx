@@ -4,8 +4,8 @@ import "../../css/general.css"
 import { Datos } from "../../Datos.jsx"
 import { Menu } from "../../Menu.jsx"
 import { ContenidoProjects } from "./ContenidoProjects.jsx"
+import { Doggo } from "../../Doggo.jsx"
 
-import imgSrc from "../../../archivos/Latest.webp";
 
 export function Projects() {
 
@@ -18,9 +18,7 @@ export function Projects() {
                 <Menu></Menu>
                 <ContenidoProjects></ContenidoProjects>
             </div>
-            <div className="Sector3">
-                <img className="windowsPerro" src={imgSrc} alt="" />
-            </div>
+            <Doggo></Doggo>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import { Datos } from "../../Datos.jsx"
 import { Menu } from "../../Menu.jsx"
 import { Contenido } from "./ContenidoHome.jsx"
 
-import imgSrc from "../../../archivos/Latest.webp";
+import { Doggo } from "../../Doggo.jsx"
 
 export function Home() {
     return (
@@ -16,9 +16,7 @@ export function Home() {
                 <Menu></Menu>
                 <Contenido></Contenido>
             </div>
-            <div className="Sector3">
-                <img className="windowsPerro" src={imgSrc} alt="" />
-            </div>
+            <Doggo></Doggo>
         </div>
     )
 }
