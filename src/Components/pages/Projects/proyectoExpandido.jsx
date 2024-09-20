@@ -8,18 +8,18 @@ export function Expandido(E) {
 
     // 
     return (
-        <div className={(E.P.selected[E.P.key] ? "ProjectoDescOpen" : "ProjectoDesc")}>
-            {E.P.projects[E.P.key].desc.map((parrafo) => {
+        <div key={E.P.key} className={(E.P.selected[E.P.key] ? "ProjectoDescOpen" : "ProjectoDesc")}>
+            {E.P.projects[E.P.key].desc.map((parrafo, key) => {
 
                 if (typeof parrafo == "string") {
-                return <div className="ProjectoTexto">
+                return <div key={key} className="ProjectoTexto">
                     {parrafo}
                 </div>
                 } else {
 
                     const imgSrc1 = `${process.env.PUBLIC_URL}/imagenesProjectos/${parrafo.img}`;
                     return (
-                        <img className="ImagenDesc" src={imgSrc1} alt="" />
+                        <img key={key} className="ImagenDesc" src={imgSrc1} alt="" />
                     )
                 }
             })}        
