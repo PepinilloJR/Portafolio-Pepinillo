@@ -38,16 +38,16 @@ export function ContenidoProjects() {
                     key={key} className={(selected[key] ? "ProjectoContainerOpen" : "ProjectoContainer")} style={{marginLeft: "auto"}}>
 
 
-                    <button className={selected[key] ? "BotonCerrarO" : "BotonCerrarC"}>Cerrar</button>
+                    <button key={key} className={selected[key] ? "BotonCerrarO" : "BotonCerrarC"}>Cerrar</button>
 
-                    
-                    <div className="ProjectoBox" > 
-                        <div className="ProjectoTexto">
-                            <div className="ProjectoTitulo">{project.title}</div>
+
+                    <div key={`keyBox${key}`} className="ProjectoBox" > 
+                        <div key={key} className="ProjectoTexto">
+                            <div key={key} className="ProjectoTitulo">{project.title}</div>
                                 {project.text}
-                                <Expandido P={{selected, setSelected, projects, key}} ></Expandido>
+                                <Expandido key={`keyExp ${key}}`} P={{selected, setSelected, projects, key}} ></Expandido>
                         </div>
-                    <div  className={selected[key] ? "ProjectoFotosOpen" : "ProjectoFotos"}>
+                    <div  key={`keyImg${key}`}  className={selected[key] ? "ProjectoFotosOpen" : "ProjectoFotos"}>
                         <img className="foto" style={{width: '100%', height: '100%',gridRow: project.images[0].gridRow, gridColumn: project.images[0].gridColumn}} src={imgSrc1} alt="" />
                         <img className="foto" style={{width: '100%', height: '100%',gridRow: project.images[1].gridRow, gridColumn: project.images[1].gridColumn}} src={imgSrc2} alt="" />
                         <img className="foto" style={{width: '100%', height: '100%',gridRow: project.images[2].gridRow, gridColumn: project.images[2].gridColumn}} src={imgSrc3} alt="" />
