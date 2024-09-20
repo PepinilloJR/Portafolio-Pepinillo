@@ -28,8 +28,8 @@ export function ContenidoProjects() {
             {projects.map((project,key) => {
                 // for now this will do because all projects will only include 3 images
                 const imgSrc1 = `${process.env.PUBLIC_URL}/imagenesProjectos/${project.images[0].img}`;
-                const imgSrc2 = `${process.env.PUBLIC_URL}/imagenesProjectos/${project.images[0].img}`;
-                const imgSrc3 = `${process.env.PUBLIC_URL}/imagenesProjectos/${project.images[0].img}`;  // this is important
+                const imgSrc2 = `${process.env.PUBLIC_URL}/imagenesProjectos/${project.images[1].img}`;
+                const imgSrc3 = `${process.env.PUBLIC_URL}/imagenesProjectos/${project.images[2].img}`;  // this is important
                 // the only way (the only way i found) i can add dinamically this images to every project, is by accesing the public folder
                 // and using the files there
                 // this is because all files inside src are managed by webpack and they need to be imported
