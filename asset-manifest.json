@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/Portafolio-Pepinillo/static/css/main.4ad24803.css",
-    "main.js": "/Portafolio-Pepinillo/static/js/main.ef5bf6c6.js",
+    "main.css": "/Portafolio-Pepinillo/static/css/main.cb56ef8e.css",
+    "main.js": "/Portafolio-Pepinillo/static/js/main.59a83c7a.js",
     "static/media/Latest.webp": "/Portafolio-Pepinillo/static/media/Latest.f56f9dcfcd159d26898e.webp",
     "static/media/w_FMppFo_400x400.jpg": "/Portafolio-Pepinillo/static/media/w_FMppFo_400x400.b07dd5556df4ad2f875a.jpg",
+    "static/media/Think.webp": "/Portafolio-Pepinillo/static/media/Think.81855ab06d361a396c95.webp",
     "index.html": "/Portafolio-Pepinillo/index.html",
-    "main.4ad24803.css.map": "/Portafolio-Pepinillo/static/css/main.4ad24803.css.map",
-    "main.ef5bf6c6.js.map": "/Portafolio-Pepinillo/static/js/main.ef5bf6c6.js.map"
+    "main.cb56ef8e.css.map": "/Portafolio-Pepinillo/static/css/main.cb56ef8e.css.map",
+    "main.59a83c7a.js.map": "/Portafolio-Pepinillo/static/js/main.59a83c7a.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ad24803.css",
-    "static/js/main.ef5bf6c6.js"
+    "static/css/main.cb56ef8e.css",
+    "static/js/main.59a83c7a.js"
   ]
 }
