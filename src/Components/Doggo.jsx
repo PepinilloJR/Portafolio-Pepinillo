@@ -67,7 +67,7 @@ export function Doggo() {
                 }
             } else {
 
-                // por ejemplo, aca podria pasa si usara wagged, que si, al clickear inicializa en false, pero podria pasar que justo se estaba ejecutando un useEffect anterior
+                // por ejemplo, aca podria pasar que si usara wagged, que si, al clickear inicializa en false, pero podria pasar que justo se estaba ejecutando un useEffect anterior
                 // y cuyo resultado fuera justo coincidentemente que speaked es true, esto saltearia el primer if y pasaria directamente al segundo, cancelando la animacion
                 if (transition < 4 && speaked === false) {
                     cambio = transition + 1
@@ -79,6 +79,7 @@ export function Doggo() {
 
                 if (transition === 4) {
                     setSpeaked(true);
+                    await sleep(4500);
                 }
                 setTransition(cambio)
             }
@@ -102,12 +103,23 @@ export function Doggo() {
         </div>
         )
     } else if (dogTouched) {
+        if (transition < 4) {
         return (
             <div className="Sector3">
                 <img className="windowsPerro" src={sprites3[transition]} alt="" />
             </div>
             )
+        } else {
+            return (
+                <div className="Sector3">
+                    <div className="windowsPerro">
+                        <div className="globoTexto">What do you want to search for?</div>
+                        <img className="windowsPerro" src={sprites3[transition]} alt="" />
+                    </div>
 
+                </div>
+            )
+        }
     } else {
     return (
         <div className="Sector3">
