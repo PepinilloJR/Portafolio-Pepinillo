@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/Portafolio-Pepinillo/static/css/main.cb56ef8e.css",
-    "main.js": "/Portafolio-Pepinillo/static/js/main.59a83c7a.js",
+    "main.css": "/Portafolio-Pepinillo/static/css/main.ca16f58f.css",
+    "main.js": "/Portafolio-Pepinillo/static/js/main.69a0579b.js",
+    "static/media/a6.png": "/Portafolio-Pepinillo/static/media/a6.d89d9ef5d74aad38538c.png",
+    "static/media/a4.png": "/Portafolio-Pepinillo/static/media/a4.99f03d16432ffbad2ddb.png",
+    "static/media/a3.png": "/Portafolio-Pepinillo/static/media/a3.527937345f47f85f9a93.png",
+    "static/media/a5.png": "/Portafolio-Pepinillo/static/media/a5.4c83c5dcbba6659b997a.png",
+    "static/media/a2.png": "/Portafolio-Pepinillo/static/media/a2.a6191063a647edef3926.png",
+    "static/media/a1.png": "/Portafolio-Pepinillo/static/media/a1.48466ef19ee6222659ca.png",
     "static/media/Latest.webp": "/Portafolio-Pepinillo/static/media/Latest.f56f9dcfcd159d26898e.webp",
     "static/media/w_FMppFo_400x400.jpg": "/Portafolio-Pepinillo/static/media/w_FMppFo_400x400.b07dd5556df4ad2f875a.jpg",
-    "static/media/Think.webp": "/Portafolio-Pepinillo/static/media/Think.81855ab06d361a396c95.webp",
     "index.html": "/Portafolio-Pepinillo/index.html",
-    "main.cb56ef8e.css.map": "/Portafolio-Pepinillo/static/css/main.cb56ef8e.css.map",
-    "main.59a83c7a.js.map": "/Portafolio-Pepinillo/static/js/main.59a83c7a.js.map"
+    "main.ca16f58f.css.map": "/Portafolio-Pepinillo/static/css/main.ca16f58f.css.map",
+    "main.69a0579b.js.map": "/Portafolio-Pepinillo/static/js/main.69a0579b.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb56ef8e.css",
-    "static/js/main.59a83c7a.js"
+    "static/css/main.ca16f58f.css",
+    "static/js/main.69a0579b.js"
   ]
 }
