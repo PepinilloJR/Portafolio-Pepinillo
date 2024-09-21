@@ -40,7 +40,7 @@
 .windowsPerro {
     position: sticky;
     justify-self: center;
-    width: 120px;
-    height: 120px;
+    width: 300px;
+    height: 300px;
     top: 70%;
 }
