@@ -38,6 +38,7 @@
 
 
 .windowsPerro {
+    background-color: aqua;
     position: sticky;
     justify-self: center;
     width: 300px;
