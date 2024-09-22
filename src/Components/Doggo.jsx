@@ -1,5 +1,6 @@
 
-import { useEffect, useRef, useState } from "react";
+import { Component, useEffect, useRef, useState } from "react";
+import { DoggoSelected, DoggoTalking, DoggoUnselected } from "./ComDoggo";
 import imgSrc from "../archivos/Latest.webp";
 import imgSrc1 from "../archivos/a1.png";
 import imgSrc2 from "../archivos/a2.png";
@@ -45,11 +46,6 @@ export function Doggo() {
     // esta parte puede mejorar, y lo hara en el futuro!!
     
     useEffect(() => {
-
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-
         const animar = async () => {
             // uso esta referencia para que no se acumulen diferentes useEffect
             UseEffectejecutandose.current = true;
@@ -101,42 +97,23 @@ export function Doggo() {
     useEffect (()=> {
         ObtenerComentarios({comentarios, setComentarios})
     }, [])
-    console.log(comentario)
+
+    
     if (comentarios.length > 0) {
 
     if (dogSelected && !dogTouched) {
         return (
-        <div className="Sector3">
-            <img onClick={() => {setDogTouched(true); setTransition(0); setSpeaked(false); setComentario(Math.floor(Math.random() * (comentarios.length - 0) + 0))}} onMouseLeave={() => {setDogSelected(false)}} className="windowsPerro" src={sprites2[animation]} alt="" />
-        </div>
+            <DoggoSelected O={{setDogTouched, setTransition, setSpeaked, setComentario, comentarios, setDogSelected, sprites2, animation}}></DoggoSelected>
         )
     } else if (dogTouched) {
-        if (transition < 4) {
         return (
-            <div className="Sector3">
-                <img className="windowsPerro" src={sprites3[transition]} alt="" />
-            </div>
-            )
-        } else {
-            return (
-                <div className="Sector3">
-                    <div className="windowsPerro">
-                        <div className="globoTexto">{comentarios[comentario]}</div>
-                        <img className="windowsPerro" src={sprites3[transition]} alt="" />
-                    </div>
-
-                </div>
-            )
-        }
+        <DoggoTalking O={{transition, sprites3,comentarios,comentario}}></DoggoTalking>
+        )
     } else {
     return (
-        <div className="Sector3">
-            <img onMouseEnter={() => {setDogSelected(true);}} className="windowsPerro" src={sprites1[animation]} alt="" />
-        </div>
+        <DoggoUnselected O={{setDogSelected, sprites1, animation}}></DoggoUnselected>
     )}}
 }
-
-
 
 async function ObtenerComentarios(setter) {
     try {
@@ -152,9 +129,12 @@ async function ObtenerComentarios(setter) {
            headers: { 
             'Accept': 'application/json' 
            }}) 
-        console.log(await response.text())
-        
       var json = await response.json();
       setter.setComentarios(json)
         
-    }}
+    }
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
