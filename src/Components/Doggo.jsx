@@ -34,6 +34,8 @@ export function Doggo() {
 
     const [sprites3, setSprites3] = useState([imgSrc7, imgSrc8, imgSrc9, imgSrc10, imgSrc11])
 
+    const [comentarios, setComentarios] = useState([])
+    const [comentario, setComentario] = useState(0)
     const UseEffectejecutandose = useRef(false)
     const [estadoUseEffect, setEstadoUseEffect] = useState(false)
 
@@ -41,6 +43,7 @@ export function Doggo() {
     // por cierto, el useEffect NO puede devolver una promesa asi que la funcion asyncrona debemos definirla dentro del useEffect
 
     // esta parte puede mejorar, y lo hara en el futuro!!
+    
     useEffect(() => {
 
         function sleep(ms) {
@@ -95,11 +98,16 @@ export function Doggo() {
     }, [estadoUseEffect])
 
 
+    useEffect (()=> {
+        ObtenerComentarios({comentarios, setComentarios})
+    }, [])
+    console.log(comentario)
+    if (comentarios.length > 0) {
 
     if (dogSelected && !dogTouched) {
         return (
         <div className="Sector3">
-            <img onClick={() => {setDogTouched(true); setTransition(0); setSpeaked(false)}} onMouseLeave={() => {setDogSelected(false)}} className="windowsPerro" src={sprites2[animation]} alt="" />
+            <img onClick={() => {setDogTouched(true); setTransition(0); setSpeaked(false); setComentario(Math.floor(Math.random() * (comentarios.length - 0) + 0))}} onMouseLeave={() => {setDogSelected(false)}} className="windowsPerro" src={sprites2[animation]} alt="" />
         </div>
         )
     } else if (dogTouched) {
@@ -113,7 +121,7 @@ export function Doggo() {
             return (
                 <div className="Sector3">
                     <div className="windowsPerro">
-                        <div className="globoTexto">What do you want to search for?</div>
+                        <div className="globoTexto">{comentarios[comentario]}</div>
                         <img className="windowsPerro" src={sprites3[transition]} alt="" />
                     </div>
 
@@ -125,6 +133,28 @@ export function Doggo() {
         <div className="Sector3">
             <img onMouseEnter={() => {setDogSelected(true);}} className="windowsPerro" src={sprites1[animation]} alt="" />
         </div>
-    )
-    }
+    )}}
 }
+
+
+
+async function ObtenerComentarios(setter) {
+    try {
+        const response = await fetch("/comentarios.json", {
+        headers: { 
+          'Accept': 'application/json' 
+        }}) 
+
+        var json = await response.json();
+        setter.setComentarios(json)
+    } catch (error) {
+      const response = await fetch("https://pepinillojr.github.io/Portafolio-Pepinillo/comentarios.json", {
+           headers: { 
+            'Accept': 'application/json' 
+           }}) 
+        console.log(await response.text())
+        
+      var json = await response.json();
+      setter.setComentarios(json)
+        
+    }}
