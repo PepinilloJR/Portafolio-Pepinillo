@@ -4,7 +4,7 @@ import { Datos } from "../../Datos.jsx"
 import { Menu } from "../../Menu.jsx"
 import { Contenido } from "./ContenidoHome.jsx"
 
-import { Doggo } from "../../Doggo.jsx"
+import { Rover } from "../../Doggo.jsx"
 
 export function Home() {
     return (
@@ -16,7 +16,7 @@ export function Home() {
                 <Menu></Menu>
                 <Contenido></Contenido>
             </div>
-            <Doggo></Doggo>
+            <Rover></Rover>
         </div>
     )
 }

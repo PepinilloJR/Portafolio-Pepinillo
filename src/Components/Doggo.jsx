@@ -1,5 +1,6 @@
 
 import { Component, useEffect, useRef, useState } from "react";
+import React from "react";
 import { DoggoSelected, DoggoTalking, DoggoUnselected } from "./ComDoggo";
 import imgSrc from "../archivos/Latest.webp";
 import imgSrc1 from "../archivos/a1.png";
@@ -14,7 +15,7 @@ import imgSrc9 from "../archivos/t3.png";
 import imgSrc10 from "../archivos/t4.png";
 import imgSrc11 from "../archivos/t5.png";
 
-export function Doggo() {
+function Doggo() {
 
     const [dogSelected, setDogSelected] = useState(false)
 
@@ -44,7 +45,7 @@ export function Doggo() {
     // por cierto, el useEffect NO puede devolver una promesa asi que la funcion asyncrona debemos definirla dentro del useEffect
 
     // esta parte puede mejorar, y lo hara en el futuro!!
-    
+
     useEffect(() => {
         const animar = async () => {
             // uso esta referencia para que no se acumulen diferentes useEffect
@@ -94,25 +95,27 @@ export function Doggo() {
     }, [estadoUseEffect])
 
 
-    useEffect (()=> {
-        ObtenerComentarios({comentarios, setComentarios})
+    useEffect(() => {
+        ObtenerComentarios({ comentarios, setComentarios })
     }, [])
 
-    
+
     if (comentarios.length > 0) {
 
-    if (dogSelected && !dogTouched) {
-        return (
-            <DoggoSelected O={{setDogTouched, setTransition, setSpeaked, setComentario, comentarios, setDogSelected, sprites2, animation}}></DoggoSelected>
-        )
-    } else if (dogTouched) {
-        return (
-        <DoggoTalking O={{transition, sprites3,comentarios,comentario}}></DoggoTalking>
-        )
-    } else {
-    return (
-        <DoggoUnselected O={{setDogSelected, sprites1, animation}}></DoggoUnselected>
-    )}}
+        if (dogSelected && !dogTouched) {
+            return (
+                <DoggoSelected O={{ setDogTouched, setTransition, setSpeaked, setComentario, comentarios, setDogSelected, sprites2, animation }}></DoggoSelected>
+            )
+        } else if (dogTouched) {
+            return (
+                <DoggoTalking O={{ transition, sprites3, comentarios, comentario }}></DoggoTalking>
+            )
+        } else {
+            return (
+                <DoggoUnselected O={{ setDogSelected, sprites1, animation }}></DoggoUnselected>
+            )
+        }
+    }
 }
 
 async function ObtenerComentarios(setter) {
@@ -137,4 +140,16 @@ async function ObtenerComentarios(setter) {
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// esto es una clase component de react, y nos sirve ahora mismo para poder realizar ciertas mejoras de rendimiento
+// particularmente, quiero precargar las imagenes
+
+export class Rover extends React.Component {
+    render() {
+        return (
+            <Doggo></Doggo>
+        )
+    }
+
 }

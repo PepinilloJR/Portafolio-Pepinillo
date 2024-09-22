@@ -19,7 +19,7 @@ export function Expandido(E) {
 
                     const imgSrc1 = `${process.env.PUBLIC_URL}/imagenesProjectos/${parrafo.img}`;
                     return (
-                        <img key={key} className="ImagenDesc" src={imgSrc1} alt="" />
+                        <img key={key} loa className="ImagenDesc" src={imgSrc1} alt="" />
                     )
                 }
             })}        

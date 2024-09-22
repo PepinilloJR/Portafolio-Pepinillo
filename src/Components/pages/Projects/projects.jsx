@@ -4,7 +4,7 @@ import "../../css/general.css"
 import { Datos } from "../../Datos.jsx"
 import { Menu } from "../../Menu.jsx"
 import { ContenidoProjects } from "./ContenidoProjects.jsx"
-import { Doggo } from "../../Doggo.jsx"
+import { Rover } from "../../Doggo.jsx"
 
 
 export function Projects() {
@@ -18,7 +18,7 @@ export function Projects() {
                 <Menu></Menu>
                 <ContenidoProjects></ContenidoProjects>
             </div>
-            <Doggo></Doggo>
+            <Rover></Rover>
         </div>
     )
 }
