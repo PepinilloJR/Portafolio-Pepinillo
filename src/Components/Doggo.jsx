@@ -15,6 +15,21 @@ import imgSrc9 from "../archivos/t3.png";
 import imgSrc10 from "../archivos/t4.png";
 import imgSrc11 from "../archivos/t5.png";
 
+const preloadImages = [
+    imgSrc1,
+    imgSrc2, 
+    imgSrc3,
+    imgSrc4,
+    imgSrc5, 
+    imgSrc6,
+    imgSrc7,
+    imgSrc8,
+    imgSrc9,
+    imgSrc10,
+    imgSrc11
+]
+
+
 function Doggo() {
 
     const [dogSelected, setDogSelected] = useState(false)
@@ -145,7 +160,16 @@ function sleep(ms) {
 // esto es una clase component de react, y nos sirve ahora mismo para poder realizar ciertas mejoras de rendimiento
 // particularmente, quiero precargar las imagenes
 
+
 export class Rover extends React.Component {
+
+    componentDidMount() {
+        preloadImages.forEach(picture => {
+            const img = new Image();
+            img.src = picture;
+        });
+    }
+
     render() {
         return (
             <Doggo></Doggo>
