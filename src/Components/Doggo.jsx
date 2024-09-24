@@ -163,6 +163,7 @@ function sleep(ms) {
 
 export class Rover extends React.Component {
 
+    // esto cachea las fotos a usar del perro antes de renderizarlo, al crear componentes de imagenes usando esas direcciones
     componentDidMount() {
         preloadImages.forEach(picture => {
             const img = new Image();
