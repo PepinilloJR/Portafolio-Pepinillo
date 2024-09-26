@@ -1,41 +1,51 @@
 {"list":[
     {
       "title": "Online Cowboys game",
-      "text": "This is one of my first projects related to online games",
-      "desc":  ["Nothing here yet", "Nothing here yet"],
+      "text": "This is one of my first projects related to online games.",
+      "desc":  ["Nothing here yet.", "Nothing here yet."],
       "images": [
         {"img": "imgGamV.PNG", "gridRow": "1", "gridColumn": "1 / 3"}, 
         {"img": "imgCodV.PNG", "gridRow": "2", "gridColumn": "1"}, 
         {"img": "imgGam2V.PNG", "gridRow": "2", "gridColumn": "2"}
+    ],"url": [
+      {"link":"https://github.com/PepinilloJR/front-chat-20", "desc":"frontend"},
+      {"link":"https://github.com/PepinilloJR/chat-back", "desc":"backend"}
     ]
       
     },
     {
       "title": "Chat Website",
-      "text": "My first functional chat using React and Express",
+      "text": "My first functional chat using React and Express.",
       "desc": [
-      "It's an easy to use React powered app that fuctions as a very basic anonymous chat",
+      "It's an easy to use React powered app that fuctions as a very basic anonymous chat.",
       { "img": "imgChatWEB2.png"}, 
-      "Although i have the fronted published on github pages, you will have to host it by yourself because is currently nonusable, as the backend is not hosted anywhere right now", 
-      { "img": "imgChatWEB.png"}, 
-      "a doggo" ],
+      "Although i have the fronted published on github pages, you will have to host it by yourself because is currently nonusable, as the backend is not hosted anywhere right now.", 
+      { "img": "imgChatWEB.png"},
+      "You can find both of them right here !"],
       "images": [
         {"img": "IMGChatWEB2.png", "gridRow": "1", "gridColumn": "1"}, 
         {"img": "imgChatWEB.png", "gridRow": "2", "gridColumn": "1"}, 
         {"img": "IMGChatWEB2.png", "gridRow": "1/3", "gridColumn": "2"}
+    ],
+    "url": [
+      {"link":"https://github.com/PepinilloJR/front-chat-20", "desc":"frontend"},
+      {"link":"https://github.com/PepinilloJR/chat-back", "desc":"backend"}
     ]
       
     },
     {
       "title": "Chat CMD",
-      "text": "i created a a chat (again) while learning some networking with .NET",
+      "text": "I've created a chat (again) with .NET while learning some networking.",
       "desc":  [
-      "Nothing here yet", 
-      "Nothing here yet"],
+      "Nothing here yet.", 
+      "Nothing here yet."],
       "images": [
         {"img": "imgConCmd.PNG", "gridRow": "1", "gridColumn": "1"}, 
         {"img": "imgServerCmd.PNG", "gridRow": "1", "gridColumn": "2"}, 
         {"img": "imgChatCmd.PNG", "gridRow": "2", "gridColumn": "1 / 3"}
+    ],"url": [
+      {"link":"https://github.com/PepinilloJR/front-chat-20", "desc":"frontend"},
+      {"link":"https://github.com/PepinilloJR/chat-back", "desc":"backend"}
     ]
       
     }

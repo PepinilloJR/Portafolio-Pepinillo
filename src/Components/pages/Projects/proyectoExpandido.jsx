@@ -22,7 +22,16 @@ export function Expandido(E) {
                         <img key={key} loa className="ImagenDesc" src={imgSrc1} alt="" />
                     )
                 }
-            })}        
+            })
+            
+            }        
+            <div className="UrlContainer">
+                {E.P.projects[E.P.key].url.map((url, key) => {
+                    return <a className="Url" href={url.link} key={key}>
+                        {url.desc}
+                    </a>
+                })}
+            </div>
         </div>
     )
 }
