@@ -18,7 +18,7 @@
       "text": "My first functional chat using React and Express.",
       "desc": [
       "It's an easy to use React powered app that fuctions as a very basic anonymous chat.",
-      { "img": "imgChatWEB2.png"}, 
+      { "img": "IMGChatWEB2.png"}, 
       "Although i have the fronted published on github pages, you will have to host it by yourself because is currently nonusable, as the backend is not hosted anywhere right now.", 
       { "img": "imgChatWEB.png"},
       "You can find both of them right here !"],
