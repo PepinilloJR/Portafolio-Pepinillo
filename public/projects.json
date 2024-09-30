@@ -2,14 +2,18 @@
     {
       "title": "Online Cowboys game",
       "text": "This is one of my first projects related to online games.",
-      "desc":  ["Nothing here yet.", "Nothing here yet."],
+      "desc":  ["This was a mini-project or a test, which is the reason it cannot be considered complete. It consists of a basic game using ASCII, where cowboys shoot at each other. There is no way of winning, only shootouts.",
+      { "img": "imgGamV.PNG"}, 
+    { "img": "imgGam2V.PNG"},
+  "Similar to all my other test projects, there’s a client and a server. The host will need two instances of the game running: one for the server and a second one to play as the client.",
+"The connection can be made via VPN or directly using port forwarding (server’s default port is 27015).",
+"The game can be found right here !"],
       "images": [
         {"img": "imgGamV.PNG", "gridRow": "1", "gridColumn": "1 / 3"}, 
         {"img": "imgCodV.PNG", "gridRow": "2", "gridColumn": "1"}, 
         {"img": "imgGam2V.PNG", "gridRow": "2", "gridColumn": "2"}
     ],"url": [
-      {"link":"https://github.com/PepinilloJR/front-chat-20", "desc":"frontend"},
-      {"link":"https://github.com/PepinilloJR/chat-back", "desc":"backend"}
+      {"link":"https://github.com/PepinilloJR/CowboyGame", "desc":"Cowboys game"}
     ]
       
     },
@@ -37,15 +41,18 @@
       "title": "Chat CMD",
       "text": "I've created a chat (again) with .NET while learning some networking.",
       "desc":  [
-      "Nothing here yet.", 
-      "Nothing here yet."],
+      "A fast and easy to use chat that runs on the CMD of windows and other terminals.", 
+      { "img": "imgChatCmd.PNG"},
+      { "img": "imgServerCmd.PNG"},
+      "The setup is pretty basic, you can use a VPN or open the port that the server uses (defualt is 11000).",
+      "you will need .NET to run it (https://dotnet.microsoft.com/es-es/download).",
+      "You can find both client and server right here !"],
       "images": [
         {"img": "imgConCmd.PNG", "gridRow": "1", "gridColumn": "1"}, 
         {"img": "imgServerCmd.PNG", "gridRow": "1", "gridColumn": "2"}, 
         {"img": "imgChatCmd.PNG", "gridRow": "2", "gridColumn": "1 / 3"}
     ],"url": [
-      {"link":"https://github.com/PepinilloJR/front-chat-20", "desc":"frontend"},
-      {"link":"https://github.com/PepinilloJR/chat-back", "desc":"backend"}
+      {"link":"https://github.com/PepinilloJR/chatCMD", "desc":"ChatCMD"}
     ]
       
     }

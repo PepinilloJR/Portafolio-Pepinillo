@@ -35,7 +35,7 @@ export function ContenidoProjects() {
                 // this is because all files inside src are managed by webpack and they need to be imported
                 // meanwhile in the public folder all files are directly served and can be accessed by the url
                 return (
-                    <div key={key} className={(selected[key] ? "ProjectoContainerOpen" : "ProjectoContainer")} style={{marginLeft: "auto"}}>
+                    <div key={key} className={(selected[key] ? "ProjectoContainerOpen" : "ProjectoContainer")}>
 
                     <button key={key} onClick={() => {
                         const listT = selected.map((x) => x); 
