@@ -113,7 +113,7 @@
         border-left: 2px white solid;
         border-bottom: 1px white solid ;
         font-family: Arial, Helvetica, sans-serif;
-        font-size:small;
+        font-size: 1.5vw;
         font-weight: bold;
     }
     .globoTexto::after {
@@ -155,7 +155,8 @@
     .globoTexto {
         width: 170px;
         height: 130px;
-
+        font-size: 1.5vw;
+        
     }
     .globoTexto::after {
     
@@ -209,7 +210,8 @@
     .globoTexto {
         width: 80px;
         height: 60px;
-        font-size: 7px;
+        font-size: 1.5vw;
+        left: -15%;
     }
     .globoTexto::after {
      
@@ -233,9 +235,10 @@
         top: 70%;
     }
     .globoTexto {
-        width: 30px;
+        width: 60px;
         height: 20px;
-        font-size: 4px;
+        font-size: 1.5vw;
+        left: -15%;
     }
     .globoTexto::after {
      
