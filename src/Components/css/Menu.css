@@ -4,21 +4,29 @@
     position: sticky;
     top: 0px;
     justify-content: space-evenly;
-    height: 25px;
+    height: fit-content;
     padding: 2px;
     z-index: 2;
+    text-decoration: none;
 }
 
 .boton {
-    font-size: 100%;
+    display: flex;
+
+    font-size: 2vw;
     color: aqua;
     border: none;
     width: 100%;
-    height: 25px;
+    height: 3vw;
     background-color: rgb(32, 32, 32);
     z-index: 2;
 }
 
 .boton:hover {
     outline: 1px rgb(77, 77, 77) solid;
+    text-decoration: none;
+}
+
+.botonLink {
+    text-decoration: none;
 }
