@@ -4,11 +4,12 @@ import { IoCloseCircle } from "react-icons/io5";
 import { Expandido } from "./proyectoExpandido";
 import { useState, useEffect } from "react"
 
+
 export function ContenidoProjects() {
 
     const [projects, setProjects] = useState([]);
     const [selected , setSelected] = useState([])
-
+    const [opened, setOpened] = useState([-1])
     
 
     useEffect(() => {
@@ -18,12 +19,20 @@ export function ContenidoProjects() {
     useEffect(() => {
         setSelected(projects.map(() => false))
         console.log(selected)
-
     }, [projects])
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [opened])
 
     if (projects.length > 0) {
 
     return (
+        <>
+        <div className="ProjectoPresentacion">
+            <div className="ProjectoTitulo">Projects!!!</div>
+            <div className="ProjectoSubtitulo">Explore my finished projects, those in progress, and some tests (mostly tests)</div>
+        </div>
         <div className="Projecto">
             {projects.map((project,key) => {
                 // for now this will do because all projects will only include 3 images
@@ -45,7 +54,15 @@ export function ContenidoProjects() {
                     }} className={selected[key] ? "BotonCerrarO" : "BotonCerrarC"}><IoCloseCircle></IoCloseCircle></button>
 
 
-                    <div onClick={() => { const listT = selected.map((x) => false); listT[key] = !listT[key]; setSelected(listT); console.log("xdxdxd") }} key={`keyBox${key}`} className="ProjectoBox" > 
+                    <div onClick={() => {
+                            const listT = selected.map((x) => false); 
+                            listT[key] = !listT[key]; 
+                            setSelected(listT)
+                            if (key != opened) {
+                                setOpened(key)
+                            }
+                        }} 
+                        key={`keyBox${key}`} className="ProjectoBox" > 
                         <div key={key} className="ProjectoTexto">
                             <div key={key} className="ProjectoTitulo">{project.title}</div>
                                 <div className="ProjectoSubtitulo">{project.text}</div>
@@ -59,6 +76,7 @@ export function ContenidoProjects() {
                     </div>
                 </div>)})}
         </div>
+        </>
     )}
     else {
         return <div></div>
