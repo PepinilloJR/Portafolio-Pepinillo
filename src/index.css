@@ -1,7 +1,10 @@
 html, body, #root {
   height: 100%;
   width: 100%;
-  background-color: rgb(12, 12, 12); 
+  background: linear-gradient(90deg, hsla(193, 100%, 17%, 1) 0%, hsla(285, 12%, 7%, 1) 90%);
+  background: -moz-linear-gradient(90deg, hsla(193, 100%, 17%, 1) 0%, hsla(285, 12%, 7%, 1) 90%);
   margin:0;
   padding:0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

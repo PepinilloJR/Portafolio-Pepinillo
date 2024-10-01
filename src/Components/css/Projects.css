@@ -1,7 +1,7 @@
 .Projecto {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(26, 26, 26);
+    background-color: rgba(26, 26, 26, 0);
     margin: 15px;
     padding: 5px;
 }
@@ -11,7 +11,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    background-color: rgb(26, 26, 26);
+    background-color: rgba(26, 26, 26, 0.527);
     margin: 15px;
     padding: 5px;
 }
@@ -21,30 +21,37 @@
     padding: 10px;
     height: 100%;
     width: auto;
-    background-color: rgb(15, 15, 15);
+    background-color: rgba(15, 15, 15, 0);
     display: flex;
     order: auto;
     justify-content: space-around;
+    border-radius: 20px;
 }
 
 .ProjectoContainer {
-    background-color: rgb(15, 15, 15);
+    background-color: rgba(15, 15, 15, 0.692);
     margin: 10px;
     width: 48%;
     height: fit-content;
     order: auto;
-    margin-left: auto
+    margin-left: auto;
+    border-radius: 20px;
 }
 
 .ProjectoContainer:hover {
+    position: relative;
     outline: rgb(61, 61, 61) solid 1px;
-    margin-left: auto
+    margin-left: auto;
+    box-shadow: -5px 5px 2px 1px rgb(14, 12, 12);
+    top: -2px;
+    transition: 0.2s;
+    border-radius: 20px;
 }
 
 .ProjectoContainerOpen {
     display: flex;
     flex-direction: column;
-    background-color: rgb(15, 15, 15);
+    background-color: rgba(15, 15, 15, 0.63);
     margin: 10px;
     padding: 10px;
     width: 100%;
@@ -52,6 +59,7 @@
     justify-content: space-evenly;
     transition: 0s;
     order:-1;
+    border-radius: 25px;
 }
 
 
@@ -146,7 +154,7 @@
     height: 40px;
     font-size: 30px;
     background-color:rgba(31, 31, 31, 0);
-    color: rgb(32, 32, 32);
+    color: rgb(63, 63, 63);
     transition: 0s;
 }
 
@@ -174,7 +182,7 @@
 
 @media (max-width: 1400px) {
 .ProjectoFotos {
-    border: 0.5px solid rgb(43, 43, 43);
+
     display: grid;
     grid-template-rows: 60px 60px ;
     grid-template-columns: 60px 60px ;
@@ -188,7 +196,7 @@
 
 @media (max-width: 1270px) {
     .ProjectoFotos {
-        border: 0.5px solid rgb(43, 43, 43);
+
         display: grid;
         grid-template-rows: 50px 50px ;
         grid-template-columns: 50px 50px ;
@@ -198,7 +206,7 @@
         height: fit-content;
     }
     .ProjectoContainer {
-        background-color: rgb(15, 15, 15);
+
         margin: 10px;
         width: 100%;
         height: fit-content;
@@ -213,7 +221,6 @@
         padding: 10px;
         height: 100%;
         width: auto;
-        background-color: rgb(15, 15, 15);
         display: flex;
         order: auto;
         justify-content: space-around;
@@ -290,7 +297,7 @@
         height: fit-content;
     }
     .ProjectoContainer {
-        background-color: rgb(15, 15, 15);
+
         width: 100%;
         height: fit-content;
         order: auto;
@@ -302,7 +309,7 @@
         margin: 0px;
         height: 100%;
         width: auto;
-        background-color: rgb(15, 15, 15);
+
         display: flex;
         order: auto;
     }
@@ -343,7 +350,7 @@
         width: 100%;
     }
     .ProjectoContainer {
-        background-color: rgb(15, 15, 15);
+
         margin: 5px;
         width: 100%;
         height: fit-content;
@@ -358,7 +365,7 @@
         padding: 0px;
         height: 100%;
         width: auto;
-        background-color: rgb(15, 15, 15);
+
         display: flex;
         order: auto;
         justify-content: space-around;
@@ -367,14 +374,14 @@
     .Projecto {
         display: flex;
         flex-wrap: wrap;
-        background-color: rgb(26, 26, 26);
+
         margin: 5px;
         padding: 5px;
     }
     .ProjectoContainerOpen {
         display: flex;
         flex-direction: column;
-        background-color: rgb(15, 15, 15);
+
         margin: 5px;
         padding: 5px;
         width: 100%;
