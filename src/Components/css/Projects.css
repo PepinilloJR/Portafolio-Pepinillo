@@ -64,17 +64,34 @@
 .ProjectoTexto {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    padding: 10px;
+    align-items:center;
     color: rgb(118, 240, 240);
-    width: auto;
+    width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size:small;
 
 }
 
+.ProjectoParrafo {
+    text-align: justify;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: rgb(118, 240, 240);
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:small;
+
+}
+.ProjectoSubtitulo {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    color: rgb(118, 240, 240);
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:small;
+
+}
 
 .ProjectoTitulo {
     margin-bottom: 5px;
@@ -100,7 +117,6 @@
 
 
 .ImagenDesc {
-    margin: 10px;
     width: 100%;
     height: 50%;
     border: 0.5px solid rgb(43, 43, 43);
@@ -181,17 +197,35 @@
     .ProjectoTexto {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items:center;
         margin-bottom: 5px;
         margin-top: 5px;
-        padding: 10px;
         color: rgb(118, 240, 240);
-        width: auto;
+        width: 100%;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 10px;
+        font-size: 15px;
+        
+    }
+    .ProjectoParrafo {
+        text-align: justify;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        color: rgb(118, 240, 240);
+        width: 100%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size:15px;
     
     }
+    .ProjectoSubtitulo {
+        text-align: center;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        color: rgb(118, 240, 240);
+        width: 50%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size:15px;
     
+    }
 }
 
 @media (max-width: 600px) {
@@ -199,14 +233,20 @@
         display: flex;
         flex-direction: column;
         color: rgb(118, 240, 240);
-        width: auto;
+        width: 100%;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 7px;
-        margin-bottom: 0.5px;
-        margin-top: 0px;
-        padding-inline: 10px;
-        padding-bottom: 0px;
+        font-size: 12px;
     }
+    .ProjectoParrafo {
+        font-size: 12px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .ProjectoSubtitulo {
+        font-size: 12px;
+        width: 100%;
+    }
+
     .ProjectoFotos {
         border: 0.5px solid rgb(43, 43, 43);
         display: grid;
@@ -251,12 +291,62 @@
         display: flex;
         flex-direction: column;
         color: rgb(118, 240, 240);
-        width: auto;
+        width: 100%;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 5px;
         margin-bottom: 0.5px;
         margin-top: 0px;
         padding-inline: 10px;
         padding-bottom: 0px;
+    }
+    .ProjectoParrafo {
+        font-size: 9px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .ProjectoSubtitulo {
+        font-size: 9px;
+        width: 100%;
+    }
+    .ProjectoContainer {
+        background-color: rgb(15, 15, 15);
+        margin: 5px;
+        width: 100%;
+        height: fit-content;
+        order: auto;
+    }
+    .ProjectoContainer:hover {
+        outline: rgb(61, 61, 61) solid 1px;
+        margin: 5px;
+    }
+    .ProjectoBox {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        width: auto;
+        background-color: rgb(15, 15, 15);
+        display: flex;
+        order: auto;
+        justify-content: space-around;
+    }
+
+    .Projecto {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgb(26, 26, 26);
+        margin: 5px;
+        padding: 5px;
+    }
+    .ProjectoContainerOpen {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(15, 15, 15);
+        margin: 5px;
+        padding: 5px;
+        width: 100%;
+        height: fit-content;
+        justify-content: space-evenly;
+        transition: 0s;
+        order:-1;
     }
 }

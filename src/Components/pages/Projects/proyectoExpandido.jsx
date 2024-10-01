@@ -12,7 +12,7 @@ export function Expandido(E) {
             {E.P.projects[E.P.key].desc.map((parrafo, key) => {
 
                 if (typeof parrafo == "string") {
-                return <div key={key} className="ProjectoTexto">
+                return <div key={key} className="ProjectoParrafo">
                     {parrafo}
                 </div>
                 } else {

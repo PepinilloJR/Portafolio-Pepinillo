@@ -48,7 +48,7 @@ export function ContenidoProjects() {
                     <div onClick={() => { const listT = selected.map((x) => false); listT[key] = !listT[key]; setSelected(listT); console.log("xdxdxd") }} key={`keyBox${key}`} className="ProjectoBox" > 
                         <div key={key} className="ProjectoTexto">
                             <div key={key} className="ProjectoTitulo">{project.title}</div>
-                                {project.text}
+                                <div className="ProjectoSubtitulo">{project.text}</div>
                                 <Expandido key={`keyExp ${key}}`} P={{selected, setSelected, projects, key}} ></Expandido>
                         </div>
                     <div  key={`keyImg${key}`}  className={selected[key] ? "ProjectoFotosOpen" : "ProjectoFotos"}>
