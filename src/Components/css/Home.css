@@ -60,6 +60,7 @@
     margin: 10px;
     text-decoration: none;
     transition:0.5s;
+    user-select: none;
 }
 
 .sitio:hover {
