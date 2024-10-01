@@ -4,16 +4,19 @@ export function Menu() {
 
     return (
         <menu className="menuContainer">
-            <Link to="/">
+            <Link className="botonLink" to="/">
             
                 <button className="boton">Home</button>
             </Link>
-            <Link to="/Proyectos">
+            <Link className="botonLink" to="/Proyectos">
                 <button className="boton">Projects</button>
             </Link>
-            <button className="boton">Nada</button>
-            <button className="boton">Nada</button>
-            <button className="boton">Nada</button>
+            <Link className="botonLink" to="/Proyectos">
+                <button className="boton">Projects</button>
+            </Link>
+            <Link className="botonLink" to="/Proyectos">
+                <button className="boton">Projects</button>
+            </Link>
 
         </menu>
     )
