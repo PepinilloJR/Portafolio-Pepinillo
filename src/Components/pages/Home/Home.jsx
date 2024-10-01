@@ -9,9 +9,7 @@ import { Rover } from "../../Doggo.jsx"
 export function Home() {
     return (
         <div className="Container">
-            <div className="Sector1">
-                <Datos></Datos>
-            </div>
+            <Datos></Datos>
             <div className="Sector2">
                 <Menu></Menu>
                 <Contenido></Contenido>
