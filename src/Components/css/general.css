@@ -41,17 +41,17 @@
     position: absolute;
     background-color: rgb(150, 243, 255);
     color: black;
-    width: 260px;
-    height: 260px;
-    padding: 15px;
-    border-radius: 20px;
-    top: -85%;
-    left: 1.7%;
+    width: 19vw;
+    height: 15vw;
+    padding: 2vw;
+    left: -2vw;
+    top: -20vw;
+    border-radius: 2vw;
     z-index: 1;
     border-left: 2px white solid;
     border-bottom: 1px white solid ;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:medium;
+    font-size:1.5vw;
     font-weight: bold;
 }
 .globoTexto::after {
@@ -68,11 +68,11 @@
  
     width: 0px; height: 0px;
  
-    border-bottom: 20px solid rgb(150, 243, 255);
+    border-bottom: 2vw solid rgb(150, 243, 255);
  
-    border-right: 40px solid transparent;
+    border-right: 5vw solid transparent;
  
-    border-left: 40px solid transparent;
+    border-left: 5vw solid transparent;
  
     transform: rotate(-92deg);
     z-index: -1;
@@ -83,106 +83,18 @@
     background-color: aqua;
     position: sticky;
     justify-self: center;
-    width: 300px;
-    height: 300px;
+    width: 20vw;
+    height: 20vw;
     top: 70%;
 }
 
 
 @media (max-width: 1400px) {
-    .windowsPerro {
-        background-color: aqua;
-        position: sticky;
-        justify-self: center;
-        width: 200px;
-        height: 200px;
-        top: 70%;
-    }
-
-    .globoTexto {
-        position: absolute;
-        background-color: rgb(150, 243, 255);
-        color: black;
-        width: 170px;
-        height: 170px;
-        padding: 15px;
-        border-radius: 20px;
-        top: -85%;
-        left: 1.7%;
-        z-index: 1;
-        border-left: 2px white solid;
-        border-bottom: 1px white solid ;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.5vw;
-        font-weight: bold;
-    }
-    .globoTexto::after {
     
-        content: '';
-     
-        position: absolute;
-     
-        bottom: 0; 
-     
-        left: 1px;
-     
-        background: transparent;
-     
-        width: 0px; height: 0px;
-     
-        border-bottom: 20px solid rgb(150, 243, 255);
-     
-        border-right: 40px solid transparent;
-     
-        border-left: 40px solid transparent;
-     
-        transform: rotate(-92deg);
-        z-index: -1;
-     
-        }
+    
 }
 
 @media (max-width: 1250px) {
-    .windowsPerro {
-        background-color: aqua;
-        position: sticky;
-        justify-self: center;
-        width: 200px;
-        height: 200px;
-        top: 70%;
-    }
-
-    .globoTexto {
-        width: 170px;
-        height: 130px;
-        font-size: 1.5vw;
-        
-    }
-    .globoTexto::after {
-    
-        content: '';
-     
-        position: absolute;
-     
-        bottom: 0; 
-     
-        left: 1px;
-     
-        background: transparent;
-     
-        width: 0px; height: 0px;
-     
-        border-bottom: 20px solid rgb(150, 243, 255);
-     
-        border-right: 40px solid transparent;
-     
-        border-left: 40px solid transparent;
-     
-        transform: rotate(-92deg);
-        z-index: -1;
-     
-        }
-
     .Sector1 {
         display: none;
         background-color: rgb(32, 32, 32);
@@ -199,55 +111,9 @@
 }
 
 @media (max-width: 850px) {
-    .windowsPerro {
-        background-color: aqua;
-        position: sticky;
-        justify-self: center;
-        width: 100px;
-        height: 100px;
-        top: 70%;
-    }
-    .globoTexto {
-        width: 80px;
-        height: 60px;
-        font-size: 1.5vw;
-        left: -15%;
-    }
-    .globoTexto::after {
-     
-        border-bottom: 10px solid rgb(150, 243, 255);
-     
-        border-right: 20px solid transparent;
-     
-        border-left: 20px solid transparent;
-
-     
-        }
+    
 }
 
 @media (max-width: 500px) {
-    .windowsPerro {
-        background-color: aqua;
-        position: sticky;
-        justify-self: center;
-        width: 70px;
-        height: 70px;
-        top: 70%;
-    }
-    .globoTexto {
-        width: 60px;
-        height: 20px;
-        font-size: 1.5vw;
-        left: -15%;
-    }
-    .globoTexto::after {
-     
-        border-bottom: 10px solid rgb(150, 243, 255);
-     
-        border-right: 20px solid transparent;
-     
-        border-left: 20px solid transparent;
-
-     
-    }
+    
 }
