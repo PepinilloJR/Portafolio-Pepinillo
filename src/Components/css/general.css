@@ -18,6 +18,102 @@
     border: 0.5px solid rgb(43, 43, 43);
 }
 
+.Sector1DO {
+    display: none;
+    width: 25%;
+    
+    border: 0.5px solid rgb(43, 43, 43);
+}
+.Sector1DC {
+    display: none;
+    width: 25%;
+    
+    border: 0.5px solid rgb(43, 43, 43);
+}
+
+.ContainerDatos {
+    top: 0px;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Portada {
+    margin: 50px;
+}
+
+.fotoPortada {
+    border-radius: 360px;
+    width: 300px;
+    border: rgb(43, 43, 43) solid 3px;
+}
+.Redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.Red {
+    display: flex;
+    width: 120px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(66, 66, 66);
+    padding: 10px;
+    border-radius: 15px;
+    margin: 15px;
+    align-items: center;
+    transition: 0.3s;
+    justify-content: space-between;
+    font:icon;
+    font-size: large;
+}
+
+.BotonDesplegeBoton {
+    display: flex;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: calc(1.5vh + 1.5vw);
+    border-bottom-right-radius: calc(1.5vh + 1.5vw);
+    left: 100%;
+    top: 20%;
+    width: calc(5vh + 3vw);
+    height:calc(5vh + 3vw) ;
+    background-color: rgba(32, 32, 32, 0.63);
+    font-size: calc(1.5vh + 1.5vw);
+    transition: all 0.5s;
+}
+
+.BotonDesplegeBotonO {
+    display: flex;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: calc(1.5vh + 1.5vw);
+    border-bottom-right-radius: calc(1.5vh + 1.5vw);
+    left: 100%;
+    top: 80%;
+    width: calc(5vh + 3vw);
+    height:calc(5vh + 3vw) ;
+    background-color: rgba(32, 32, 32, 0.63);
+    font-size: calc(1.5vh + 1.5vw);
+    transition: all 0.5s;
+}
+
+.Red:hover {
+    display: flex;
+    width: 130px;
+    transition: 0.5s;
+    background-color: rgb(207, 207, 207);
+    color: rgb(0, 0, 0);
+}
+
 .Sector2 {
     background-color: rgba(36, 36, 36, 0.432);
     width: 50%;
@@ -101,6 +197,74 @@
         
         border: 0.5px solid rgb(43, 43, 43);
     }
+
+    .Sector1DO {
+        position:fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(32, 32, 32, 0.63);
+        width: 75%;
+        left:0px;
+        height: 100%;
+        border: 0.5px solid rgb(43, 43, 43);
+        z-index: 4;
+        transition: all 0.5s;
+    }
+    .Sector1DC {
+        position:fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(32, 32, 32, 0.63);
+        width: 75%;
+        left: -75%;
+        height: 100%;
+        border: 0.5px solid rgb(43, 43, 43);
+        z-index: 4;
+        transition: all 0.5s;
+    }
+
+    .Portada {
+        margin: 3vh;
+    }
+    
+    .fotoPortada {
+        border-radius: 360px;
+        width: calc(10vw + 5vh);
+        border: rgb(43, 43, 43) solid 3px;
+    }
+    .Redes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .Red {
+        display: flex;
+        width: calc(17vw + 5vh);
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        background-color: rgb(66, 66, 66);
+        padding: calc(1vw + 1vh);
+        border-radius: 2vw;
+        margin: 1.5vh;
+        align-items: center;
+        transition: 0.3s;
+        justify-content: space-between;
+        font:icon;
+        font-size: calc(1vw + 1vh);
+    }
+    
+    .Red:hover {
+        display: flex;
+        width: calc(18vw + 6vh);
+        transition: 0.5s;
+        background-color: rgb(207, 207, 207);
+        color: rgb(0, 0, 0);
+    }
+
     .Sector2 {
         width: 75%;
        
