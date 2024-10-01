@@ -10,7 +10,7 @@
     padding: 10px;
     color: rgb(118, 240, 240);
     background-color: rgb(15, 15, 15);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Roboto Mono', monospace;
 }
 
 
@@ -21,6 +21,6 @@
     width: fit-content;
     color: rgb(163, 163, 163);
     
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Roboto Mono', monospace;
     font-size: larger;
 }

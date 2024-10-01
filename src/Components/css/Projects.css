@@ -6,6 +6,16 @@
     padding: 5px;
 }
 
+.ProjectoPresentacion {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    margin: 15px;
+    padding: 5px;
+}
+
 .ProjectoBox {
     margin: 0px;
     padding: 10px;
@@ -48,10 +58,10 @@
 .ProjectoFotos {
     border: 0.5px solid rgb(43, 43, 43);
     display: grid;
-    grid-template-rows: 100px 100px ;
-    grid-template-columns: 100px 100px ;
-    grid-auto-rows: 200px; 
-    grid-auto-columns: 200px; 
+    grid-template-rows: 90px 90px ;
+    grid-template-columns: 90px 90px ;
+    grid-auto-rows: 90px; 
+    grid-auto-columns: 90px; 
     grid-auto-flow: row;
     height: fit-content;
 }
@@ -67,40 +77,41 @@
     align-items:center;
     color: rgb(118, 240, 240);
     width: 100%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Roboto Mono', monospace;
     font-size:small;
-
+    margin: 2px;
 }
 
 .ProjectoParrafo {
     text-align: justify;
     margin-bottom: 5px;
     margin-top: 5px;
-    color: rgb(118, 240, 240);
+    color: rgb(187, 199, 199);
     width: 100%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Roboto Mono', monospace;
     font-size:small;
 
 }
 .ProjectoSubtitulo {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-top: 5px;
     color: rgb(118, 240, 240);
     width: 100%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Roboto Mono', monospace;
+    text-shadow: 1px 1px 2px rgb(80, 91, 97);
     font-size:small;
 
 }
 
 .ProjectoTitulo {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    padding: 10px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    padding: 1px;
     width: fit-content;
     color: rgb(163, 163, 163);
-    
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 2px rgb(73, 57, 57);
+    font-family:'Roboto Mono', monospace;
     font-size: medium;
 }
 
@@ -121,6 +132,8 @@
     width: 100%;
     height: 50%;
     border: 0.5px solid rgb(43, 43, 43);
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .BotonCerrarC {
@@ -159,8 +172,21 @@
     font-size:small;
 }
 
+@media (max-width: 1400px) {
+.ProjectoFotos {
+    border: 0.5px solid rgb(43, 43, 43);
+    display: grid;
+    grid-template-rows: 60px 60px ;
+    grid-template-columns: 60px 60px ;
+    grid-auto-rows: 60px; 
+    grid-auto-columns: 60px; 
+    grid-auto-flow: row;
+    height: fit-content;
+}
+}
 
-@media (max-width: 1700px) {
+
+@media (max-width: 1270px) {
     .ProjectoFotos {
         border: 0.5px solid rgb(43, 43, 43);
         display: grid;
@@ -205,7 +231,6 @@
         margin-top: 5px;
         color: rgb(118, 240, 240);
         width: 100%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 15px;
         
     }
@@ -215,7 +240,6 @@
         margin-top: 5px;
         color: rgb(118, 240, 240);
         width: 100%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size:15px;
     
     }
@@ -225,7 +249,7 @@
         margin-top: 5px;
         color: rgb(118, 240, 240);
         width: 50%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
         font-size:15px;
     
     }
@@ -243,7 +267,6 @@
         flex-direction: column;
         color: rgb(118, 240, 240);
         width: 100%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 12px;
     }
     .ProjectoParrafo {
@@ -288,8 +311,6 @@
         margin-top: 1px;
         width: fit-content;
         color: rgb(163, 163, 163);
-        
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: x-small;
     }
     .Url {
@@ -306,7 +327,6 @@
         flex-direction: column;
         color: rgb(118, 240, 240);
         width: 100%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 5px;
         margin-bottom: 0.5px;
         margin-top: 0px;
