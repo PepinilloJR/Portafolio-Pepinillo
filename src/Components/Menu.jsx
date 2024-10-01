@@ -11,8 +11,8 @@ export function Menu() {
             <Link className="botonLink" to="/Proyectos">
                 <button className="boton">Projects</button>
             </Link>
-            <Link className="botonLink" to="/Proyectos">
-                <button className="boton">Projects</button>
+            <Link className="botonLink" to="/Aboutme">
+                <button className="boton">About me</button>
             </Link>
             <Link className="botonLink" to="/Proyectos">
                 <button className="boton">Projects</button>

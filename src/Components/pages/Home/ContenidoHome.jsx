@@ -1,5 +1,5 @@
-import "../../css/Contenido.css"
-
+import "../../css/Home.css"
+import { Link } from "react-router-dom"
 export function Contenido() {
 
     return (
@@ -8,7 +8,25 @@ export function Contenido() {
                     <div className="Parrafo">
                         Welcome to my portfolio!
                         here you will find all my finished and ongoing projects! and some more...  
-                    </div>
+            </div>
+
+            <div className="contenidoSitios">
+                <Link className="sitio" to="/Proyectos">
+                        <div className="TituloSitio">Projects...</div>
+                        <div className="Desc">
+                            Look at my latest projects and experiments!!!
+
+                        </div>
+                </Link>
+                <Link className="sitio" to="/Aboutme">
+                        <div className="TituloSitio">About me...</div>
+                        <div className="Desc">
+                            Learn something about me!!!
+
+                        </div>
+                </Link>
+            </div>
+
         </div>
 
     )
