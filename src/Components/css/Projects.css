@@ -108,7 +108,7 @@
     width: 100%;
     font-family:'Roboto Mono', monospace;
     text-shadow: 1px 1px 2px rgb(80, 91, 97);
-    font-size:small;
+    font-size: calc(0.7vw + 0.7vh);
 
 }
 
@@ -120,7 +120,7 @@
     color: rgb(163, 163, 163);
     text-shadow: 1px 1px 2px rgb(73, 57, 57);
     font-family:'Roboto Mono', monospace;
-    font-size: medium;
+    font-size: calc(1vw + 1vh);
 }
 
 
@@ -257,7 +257,7 @@
         color: rgb(118, 240, 240);
         width: 50%;
 
-        font-size:15px;
+
     
     }
     .Url {
@@ -282,7 +282,7 @@
         margin-top: 5px;
     }
     .ProjectoSubtitulo {
-        font-size: 12px;
+
         width: 100%;
     }
 
@@ -318,7 +318,7 @@
         margin-top: 1px;
         width: fit-content;
         color: rgb(163, 163, 163);
-        font-size: x-small;
+
     }
     .Url {
         display: list-item;
@@ -346,7 +346,7 @@
         margin-top: 5px;
     }
     .ProjectoSubtitulo {
-        font-size: 9px;
+
         width: 100%;
     }
     .ProjectoContainer {
