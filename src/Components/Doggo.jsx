@@ -14,6 +14,7 @@ import imgSrc8 from "../archivos/t2.png";
 import imgSrc9 from "../archivos/t3.png";
 import imgSrc10 from "../archivos/t4.png";
 import imgSrc11 from "../archivos/t5.png";
+import soundBark from "../archivos/bark.mp3";
 
 const preloadImages = [
     imgSrc1,
@@ -32,12 +33,17 @@ const preloadImages = [
 
 function Doggo() {
 
+
+    let bark = new Audio(soundBark)
+
     const [dogSelected, setDogSelected] = useState(false)
 
     const [dogTouched, setDogTouched] = useState(false)
 
     const [wagged, setWagged] = useState(false)
     const [animation, setAnimation] = useState(0)
+
+    const [woofed, setWoofed] = useState(false)
 
     // se requiere transition y speaked para la otra animacion por el hecho de que animation y wagged puede cambiar asincronamente en un useEffect 
     // y mandarle otro valor que no conviene
@@ -91,9 +97,15 @@ function Doggo() {
                 } else {
                     cambio = transition - 1
                 }
+                
+                if (transition === 1 && !woofed) {
+                    bark.play();
+                    setWoofed(true)
+                }
 
                 if (transition === 4) {
                     setSpeaked(true);
+                    
                     await sleep(4500);
                 }
                 setTransition(cambio)
@@ -114,10 +126,14 @@ function Doggo() {
         ObtenerComentarios({ comentarios, setComentarios })
     }, [])
 
+    
 
     if (comentarios.length > 0) {
 
         if (dogSelected && !dogTouched) {
+            if (woofed) {
+                setWoofed(false)
+            }
             return (
                 <DoggoSelected O={{ setDogTouched, setTransition, setSpeaked, setComentario, comentarios, setDogSelected, sprites2, animation }}></DoggoSelected>
             )
@@ -164,16 +180,21 @@ function sleep(ms) {
 export class Rover extends React.Component {
 
     // esto cachea las fotos a usar del perro antes de renderizarlo, al crear componentes de imagenes usando esas direcciones
+    
+    
+    
     componentDidMount() {
         preloadImages.forEach(picture => {
             const img = new Image();
             img.src = picture;
         });
+
+        let bark = new Audio(soundBark)
     }
 
     render() {
         return (
-            <Doggo></Doggo>
+            <Doggo ></Doggo>
         )
     }
 

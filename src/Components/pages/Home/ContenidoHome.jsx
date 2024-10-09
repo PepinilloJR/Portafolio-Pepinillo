@@ -11,14 +11,14 @@ export function Contenido() {
             </div>
 
             <div className="contenidoSitios">
-                <Link className="sitio" to="/Proyectos">
+                <Link style={{animation: `spawn ${0.5}s ease-in forwards`}} className="sitio" to="/Proyectos">
                         <div className="TituloSitio">Projects...</div>
                         <div className="Desc">
                             Look at my latest projects and experiments!!!
 
                         </div>
                 </Link>
-                <Link className="sitio" to="/Aboutme">
+                <Link style={{animation: `spawn ${1}s ease-in forwards`}} className="sitio" to="/Aboutme">
                         <div className="TituloSitio">About me...</div>
                         <div className="Desc">
                             Learn something about me!!!
