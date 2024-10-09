@@ -38,14 +38,54 @@
     border-radius: 20px;
 }
 
+
+@keyframes spawn{
+    0% {
+        opacity: 0%;
+    }
+
+    99% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+@keyframes jump{
+    0% {
+        position: relative;
+        top: 0;
+    }
+
+    50% {
+        top: -4px;
+    }
+
+    75% {
+        top: 0px;
+    }
+
+    90% {
+        top: -2px;
+    }
+
+    99% {
+        position: relative;
+        top: 0px;
+    }
+
+    100% {
+
+    }
+}
+
 .ProjectoContainer:hover {
     position: relative;
     outline: rgb(61, 61, 61) solid 1px;
-    margin-left: auto;
     box-shadow: -5px 5px 2px 1px rgb(14, 12, 12);
     top: -2px;
-    transition: 0.2s;
-    border-radius: 20px;
+    transition: outline 0.2s, box-shadow 0.2s, top 2s;
 }
 
 .ProjectoContainerOpen {
@@ -55,9 +95,9 @@
     margin: 10px;
     padding: 10px;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     justify-content: space-evenly;
-    transition: 0s;
+    transition: width 0.5s;
     order:-1;
     border-radius: 25px;
 }
@@ -121,18 +161,23 @@
     text-shadow: 1px 1px 2px rgb(73, 57, 57);
     font-family:'Roboto Mono', monospace;
     font-size: calc(1vw + 1vh);
+    animation: titulo 1s ease-in forwards;
 }
 
 
 .ProjectoDesc {
     display: none;
+    opacity: 0%;
 }
 
 .ProjectoDescOpen {
     display: flex;
+    visibility: visible;
+    opacity: 100%;
     flex-direction: column;
     align-items:start;
     width: 100%;
+    transition: visibility 2s, opacity 2s ;
 }
 
 
@@ -245,7 +290,7 @@
         text-align: justify;
         margin-bottom: 5px;
         margin-top: 5px;
-        color: rgb(118, 240, 240);
+        color: rgb(187, 199, 199);
         width: 100%;
         font-size:15px;
     
