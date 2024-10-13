@@ -29,7 +29,8 @@ export function ContenidoAboutMe() {
                 <div className="Parrafo">
                     Still, I have much to learn, and I make the most of every opportunity to do so.
 
-                    Currently, I am in my third year of studying Systems Engineering at the UTN-FRC Universidad Tecnológica Nacional - Facultad Regional Córdoba in Argentina
+
+                    I live in Argentina and I'm currently in my third year of studying Systems Engineering at UTN-FRC (Universidad Tecnológica Nacional, Facultad Regional Córdoba).
                 </div>
             </div>
         </>
