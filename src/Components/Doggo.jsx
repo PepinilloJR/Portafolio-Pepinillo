@@ -16,12 +16,12 @@ import imgSrc10 from "../archivos/t4.png";
 import imgSrc11 from "../archivos/t5.png";
 import soundBark from "../archivos/bark.mp3";
 
-const preloadImages = [
+const preloadImagesSrc = [
     imgSrc1,
-    imgSrc2, 
+    imgSrc2,
     imgSrc3,
     imgSrc4,
-    imgSrc5, 
+    imgSrc5,
     imgSrc6,
     imgSrc7,
     imgSrc8,
@@ -29,11 +29,14 @@ const preloadImages = [
     imgSrc10,
     imgSrc11
 ]
+const Sprites = [
+
+]
 
 
 function Doggo() {
 
-
+    const [spritesCargados, setSpritesCargados] = useState(false)
     let bark = new Audio(soundBark)
 
     const [dogSelected, setDogSelected] = useState(false)
@@ -50,17 +53,52 @@ function Doggo() {
     const [transition, setTransition] = useState(0)
     const [speaked, setSpeaked] = useState(false)
 
+    const [sprites1, setSprites1] = useState()
 
-    const [sprites1, setSprites1] = useState([imgSrc2, imgSrc1, imgSrc3])
+    const [sprites2, setSprites2] = useState()
 
-    const [sprites2, setSprites2] = useState([imgSrc5, imgSrc4, imgSrc6])
-
-    const [sprites3, setSprites3] = useState([imgSrc7, imgSrc8, imgSrc9, imgSrc10, imgSrc11])
+    const [sprites3, setSprites3] = useState()
 
     const [comentarios, setComentarios] = useState([])
     const [comentario, setComentario] = useState(0)
     const UseEffectejecutandose = useRef(false)
     const [estadoUseEffect, setEstadoUseEffect] = useState(false)
+
+
+    useEffect(() => {
+        // precarga de las imagenes de rover para evitar parpadeo
+        function ImagenPromesa (url) {
+            // util super util conocimiento
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = function() {
+                    resolve(img)
+                }
+                img.src = url;
+            })
+        }
+
+        async function PreCarga () {
+            preloadImagesSrc.forEach(picture => {
+
+                Sprites.push(ImagenPromesa(picture))
+            });
+
+            // esto es util
+            const resultados = await Promise.all(Sprites)
+            setSpritesCargados(true);
+            setSprites1([resultados[1], resultados[0], resultados[2]])
+            setSprites2([resultados[4], resultados[3], resultados[5]])
+            setSprites3([resultados[6], resultados[7], resultados[8], resultados[9], resultados[10]])
+        } 
+        PreCarga();
+        
+    }, [])
+
+
+
+
+
 
     // ESTA SOLUCION ES PORQUE SOY UN BURRO CON LAS PROMISES
     // por cierto, el useEffect NO puede devolver una promesa asi que la funcion asyncrona debemos definirla dentro del useEffect
@@ -97,7 +135,7 @@ function Doggo() {
                 } else {
                     cambio = transition - 1
                 }
-                
+
                 if (transition === 1 && !woofed) {
                     bark.play();
                     setWoofed(true)
@@ -105,7 +143,7 @@ function Doggo() {
 
                 if (transition === 4) {
                     setSpeaked(true);
-                    
+
                     await sleep(4500);
                 }
                 setTransition(cambio)
@@ -126,46 +164,46 @@ function Doggo() {
         ObtenerComentarios({ comentarios, setComentarios })
     }, [])
 
-    
 
-    if (comentarios.length > 0) {
 
+    if (comentarios.length > 0 && spritesCargados) {
         if (dogSelected && !dogTouched) {
             if (woofed) {
                 setWoofed(false)
             }
-            return (
-                <DoggoSelected O={{ setDogTouched, setTransition, setSpeaked, setComentario, comentarios, setDogSelected, sprites2, animation }}></DoggoSelected>
-            )
-        } else if (dogTouched) {
-            return (
-                <DoggoTalking O={{ transition, sprites3, comentarios, comentario }}></DoggoTalking>
-            )
-        } else {
-            return (
-                <DoggoUnselected O={{ setDogSelected, sprites1, animation }}></DoggoUnselected>
-            )
         }
+
+        return (<>
+            <div className="Sector3">
+                <DoggoSelected O={{ setDogTouched, setTransition, setSpeaked, setComentario, comentarios, dogSelected, dogTouched, setDogSelected, sprites2, animation }}></DoggoSelected>
+                <DoggoTalking O={{ transition, sprites3, comentarios, comentario, dogTouched }}></DoggoTalking>
+                <DoggoUnselected O={{ setDogSelected, sprites1, animation, dogSelected, dogTouched }}></DoggoUnselected>
+            </div>
+        </>)
+
+
     }
 }
 
 async function ObtenerComentarios(setter) {
     try {
         const response = await fetch("/comentarios.json", {
-        headers: { 
-          'Accept': 'application/json' 
-        }}) 
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
 
         var json = await response.json();
         setter.setComentarios(json)
     } catch (error) {
-      const response = await fetch("https://pepinillojr.github.io/Portafolio-Pepinillo/comentarios.json", {
-           headers: { 
-            'Accept': 'application/json' 
-           }}) 
-      var json = await response.json();
-      setter.setComentarios(json)
-        
+        const response = await fetch("https://pepinillojr.github.io/Portafolio-Pepinillo/comentarios.json", {
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        var json = await response.json();
+        setter.setComentarios(json)
+
     }
 }
 
@@ -180,14 +218,10 @@ function sleep(ms) {
 export class Rover extends React.Component {
 
     // esto cachea las fotos a usar del perro antes de renderizarlo, al crear componentes de imagenes usando esas direcciones
-    
-    
-    
+
+
+    // esto podria hacerse en un useEffect 
     componentDidMount() {
-        preloadImages.forEach(picture => {
-            const img = new Image();
-            img.src = picture;
-        });
 
         let bark = new Audio(soundBark)
     }

@@ -176,6 +176,17 @@
     }
 
 .windowsPerro {
+    display: flex;
+    background-color: aqua;
+    position: sticky;
+    justify-self: center;
+    width: 20vw;
+    height: 20vw;
+    top: 55vh;
+}
+
+.windowsPerroC {
+    display: none;
     background-color: aqua;
     position: sticky;
     justify-self: center;
