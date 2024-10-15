@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portafolio-Pepinillo/static/css/main.d6944bb0.css",
-    "main.js": "/Portafolio-Pepinillo/static/js/main.f1bb7a90.js",
+    "main.css": "/Portafolio-Pepinillo/static/css/main.dbb1ec86.css",
+    "main.js": "/Portafolio-Pepinillo/static/js/main.3eeedc68.js",
     "static/media/t5.png": "/Portafolio-Pepinillo/static/media/t5.d9f77f351d7ad33b2e86.png",
     "static/media/a6.png": "/Portafolio-Pepinillo/static/media/a6.d89d9ef5d74aad38538c.png",
     "static/media/a4.png": "/Portafolio-Pepinillo/static/media/a4.99f03d16432ffbad2ddb.png",
@@ -17,11 +17,11 @@
     "static/media/bark.mp3": "/Portafolio-Pepinillo/static/media/bark.2793ffd0c5723935e237.mp3",
     "static/media/w_FMppFo_400x400.jpg": "/Portafolio-Pepinillo/static/media/w_FMppFo_400x400.b07dd5556df4ad2f875a.jpg",
     "index.html": "/Portafolio-Pepinillo/index.html",
-    "main.d6944bb0.css.map": "/Portafolio-Pepinillo/static/css/main.d6944bb0.css.map",
-    "main.f1bb7a90.js.map": "/Portafolio-Pepinillo/static/js/main.f1bb7a90.js.map"
+    "main.dbb1ec86.css.map": "/Portafolio-Pepinillo/static/css/main.dbb1ec86.css.map",
+    "main.3eeedc68.js.map": "/Portafolio-Pepinillo/static/js/main.3eeedc68.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6944bb0.css",
-    "static/js/main.f1bb7a90.js"
+    "static/css/main.dbb1ec86.css",
+    "static/js/main.3eeedc68.js"
   ]
 }
