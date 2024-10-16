@@ -68,7 +68,7 @@ function Doggo() {
     useEffect(() => {
         // precarga de las imagenes de rover para evitar parpadeo
         function ImagenPromesa (url) {
-            // util super util conocimiento
+            // util supert
             return new Promise((resolve, reject) => {
                 const img = new Image();
                 img.onload = function() {

@@ -196,6 +196,19 @@
 }
 
 
+.canvas {
+    background-color: aqua;
+    width: 20vw;
+    height: 20vw;
+}
+
+
+.canvasContainer {
+    position: sticky;
+    top: 55vh;
+}
+
+
 @media (max-width: 1400px) {
     
     

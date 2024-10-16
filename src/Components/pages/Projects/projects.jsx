@@ -4,7 +4,7 @@ import "../../css/general.css"
 import { Datos } from "../../Datos.jsx"
 import { Menu } from "../../Menu.jsx"
 import { ContenidoProjects } from "./ContenidoProjects.jsx"
-import { Rover } from "../../Doggo.jsx"
+import { Rover } from "../../DoggoCanvas.jsx"
 import { useState } from "react"
 
 
