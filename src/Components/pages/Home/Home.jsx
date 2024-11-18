@@ -4,7 +4,7 @@ import { Datos } from "../../Datos.jsx"
 import { Menu } from "../../Menu.jsx"
 import { Contenido } from "./ContenidoHome.jsx"
 
-import { Rover } from "../../Doggo.jsx"
+import { Rover } from "../../DoggoCanvas.jsx"
 
 export function Home() {
     return (

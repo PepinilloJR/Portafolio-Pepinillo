@@ -1,21 +1,7 @@
-import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-// vamos a usar un Ref para poder acceder al elemento
-// canvas y a su context, asi lo hacemos con react
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+
 import imgSrc from "../archivos/spritesheet.png";
-
-// defino el elemento canvas y lo paso 
-
-
-
-// TODO: esto requiere menos logica si el spritesheet esta ordenado
-//       por lo tanto, ordenar el spritesheet y cambiar la logica a 
-//       una mas simple
-//       o alternativamente, usar un json o lista contenedora de cada localizacion para cada
-//       frame de alguna de las animaciones
-function SeleccionarPos(Estado, Pos, setPos) {
-
-
-}
+import soundBark from "../archivos/bark.mp3";
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -44,9 +30,14 @@ export function Canvas() {
     const [Hovered, setHovered] = useState(false)
     const [Selected, setSelected] = useState(false)
 
+    const [Comentarios, setComentarios] = useState()
+    const [Mensaje, setMensaje] = useState("")
+
     const imagen = new Image()
     imagen.src = imgSrc;
+    let bark = new Audio(soundBark)
 
+    // animaciones
 
     const moverCola = async () => {
         if (pasoRef.current === 0) {
@@ -129,6 +120,7 @@ export function Canvas() {
             pasoLibroRef.current = 4
             await sleep(200)
             setCambio(!Cambio)
+            bark.play() // aca se reproduce el sonido de ladrido, poco conveniente para lectura pero da buen timing
         } else if (pasoLibroRef.current === 4) {
 
             posSprite.current = [3, 2, 0]
@@ -137,7 +129,7 @@ export function Canvas() {
             setCambio(!Cambio)
         } else if (pasoLibroRef.current === 5) {
             // AQUI ESTA LA ESPERA MIENTRAS LEE <---------
-            await sleep(1500)
+            await sleep(2500)
             posSprite.current = [3, 0, 0]
             pasoLibroRef.current = 6
             await sleep(200)
@@ -180,13 +172,22 @@ export function Canvas() {
     // layoutEffect deberia ejecutar codigo antes del dibujado del navegador
     // quizas sea util ejecutar aqui el cambio de las posiciones del spritte
 
+
+    useEffect(() => {
+        if (Comentarios) {
+            setMensaje(Comentarios[Math.floor(Math.random() * (Comentarios.length - 0) + 0)])
+            
+        }   
+
+    }, [Selected])
+
     useEffect(() => {
         CargarSprittes(imgSrc, setSprites)
-
+        ObtenerComentarios(setComentarios)
     }, [])
 
     useEffect(() => {
-        if (Sprites) {
+        if (Sprites && Comentarios) {
             const canvas = canvasRef.current;
             const context = canvas.getContext('2d')
             let sw = 802.5;
@@ -195,32 +196,56 @@ export function Canvas() {
             let sy = sh * posSprite.current[1];
             context.clearRect(0, 0, context.canvas.width, context.canvas.height)
             context.drawImage(Sprites, sx, sy, sw, sh, 0, 0, context.canvas.width, context.canvas.height)
-
         }
 
     }, [Sprites, Cambio])
 
 
 
+    return <>
+        <div style={{ display: pasoLibroRef.current === 5 ? "flex" : "none" }} className="globoTexto">{Mensaje}</div>
+        <canvas
+            onMouseEnter={() => {
+                if (!Selected) {
+                    setHovered(true)
+                }
+            }}
+            onMouseLeave={() => {
+                if (!Selected) {
+                    setHovered(false)
+                }
+            }}
+            onClick={() => {
+                setSelected(true)
+            }}
+            className="canvas" ref={canvasRef}>
+
+
+        </canvas>
+    </>
+}
 
 
 
-    return <canvas
-        onMouseEnter={() => {
-            if (!Selected) {
-                setHovered(true)
+
+async function ObtenerComentarios(setComentarios) {
+    try {
+        const response = await fetch("/comentarios.json", {
+            headers: {
+                'Accept': 'application/json'
             }
-        }}
-        onMouseLeave={() => {
-            if (!Selected) {
-                setHovered(false)
+        })
+
+        var json = await response.json();
+        setComentarios(json)
+    } catch (error) {
+        const response = await fetch("https://pepinillojr.github.io/Portafolio-Pepinillo/comentarios.json", {
+            headers: {
+                'Accept': 'application/json'
             }
-        }}
-        onClick={() => {
-            setSelected(true)
-        }}
-        className="canvas" ref={canvasRef}>
+        })
+        var json = await response.json();
+        setComentarios(json)
 
-
-    </canvas>
+    }
 }

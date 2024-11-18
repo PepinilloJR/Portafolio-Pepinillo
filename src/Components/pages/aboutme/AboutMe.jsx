@@ -7,7 +7,7 @@ import { Menu } from "../../Menu.jsx"
 
 import "../../css/AboutMe.css"
 
-import { Rover } from "../../Doggo.jsx"
+import { Rover } from "../../DoggoCanvas.jsx"
 
 export function AboutMe() {
     return (
