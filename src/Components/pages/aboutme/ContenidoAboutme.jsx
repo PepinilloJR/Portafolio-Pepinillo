@@ -30,7 +30,7 @@ export function ContenidoAboutMe() {
                     Still, I have much to learn, and I make the most of every opportunity to do so.
 
 
-                    I live in Argentina and I'm currently in my third year of studying Systems Engineering at UTN-FRC (Universidad Tecnológica Nacional, Facultad Regional Córdoba).
+                    I live in Argentina and I'm currently in my third year of studying Systems Engineering
                 </div>
             </div>
         </>
