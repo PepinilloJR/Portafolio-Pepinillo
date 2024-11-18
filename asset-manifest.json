@@ -1,27 +1,16 @@
 {
   "files": {
-    "main.css": "/Portafolio-Pepinillo/static/css/main.dbb1ec86.css",
-    "main.js": "/Portafolio-Pepinillo/static/js/main.3eeedc68.js",
-    "static/media/t5.png": "/Portafolio-Pepinillo/static/media/t5.d9f77f351d7ad33b2e86.png",
-    "static/media/a6.png": "/Portafolio-Pepinillo/static/media/a6.d89d9ef5d74aad38538c.png",
-    "static/media/a4.png": "/Portafolio-Pepinillo/static/media/a4.99f03d16432ffbad2ddb.png",
-    "static/media/a3.png": "/Portafolio-Pepinillo/static/media/a3.527937345f47f85f9a93.png",
-    "static/media/t4.png": "/Portafolio-Pepinillo/static/media/t4.2716c52f32634299cffa.png",
-    "static/media/a5.png": "/Portafolio-Pepinillo/static/media/a5.4c83c5dcbba6659b997a.png",
-    "static/media/a2.png": "/Portafolio-Pepinillo/static/media/a2.a6191063a647edef3926.png",
-    "static/media/a1.png": "/Portafolio-Pepinillo/static/media/a1.48466ef19ee6222659ca.png",
-    "static/media/t1.png": "/Portafolio-Pepinillo/static/media/t1.866649e0e44abd7186f6.png",
-    "static/media/t3.png": "/Portafolio-Pepinillo/static/media/t3.722f436e3c5a798b02c6.png",
-    "static/media/t2.png": "/Portafolio-Pepinillo/static/media/t2.4ffbeb7dfca7913a8805.png",
-    "static/media/Latest.webp": "/Portafolio-Pepinillo/static/media/Latest.f56f9dcfcd159d26898e.webp",
+    "main.css": "/Portafolio-Pepinillo/static/css/main.62a45577.css",
+    "main.js": "/Portafolio-Pepinillo/static/js/main.f6a5f1d0.js",
+    "static/media/spritesheet.png": "/Portafolio-Pepinillo/static/media/spritesheet.ea2e186f38b941aa3b17.png",
     "static/media/bark.mp3": "/Portafolio-Pepinillo/static/media/bark.2793ffd0c5723935e237.mp3",
     "static/media/w_FMppFo_400x400.jpg": "/Portafolio-Pepinillo/static/media/w_FMppFo_400x400.b07dd5556df4ad2f875a.jpg",
     "index.html": "/Portafolio-Pepinillo/index.html",
-    "main.dbb1ec86.css.map": "/Portafolio-Pepinillo/static/css/main.dbb1ec86.css.map",
-    "main.3eeedc68.js.map": "/Portafolio-Pepinillo/static/js/main.3eeedc68.js.map"
+    "main.62a45577.css.map": "/Portafolio-Pepinillo/static/css/main.62a45577.css.map",
+    "main.f6a5f1d0.js.map": "/Portafolio-Pepinillo/static/js/main.f6a5f1d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.dbb1ec86.css",
-    "static/js/main.3eeedc68.js"
+    "static/css/main.62a45577.css",
+    "static/js/main.f6a5f1d0.js"
   ]
 }
