@@ -47,9 +47,6 @@ export function Datos() {
                 <FaGithub></FaGithub>
                     GitHub
                 </a>
-                <a className="Red" target="blank" href="https://steamcommunity.com/profiles/76561198796699028/">
-                <FaSteam></FaSteam>
-                Steam</a>
                 <a className="Red" target="blank" href="https://t.me/PepinilloJR">
                 <FaTelegram ></FaTelegram >
                 Telegram</a>

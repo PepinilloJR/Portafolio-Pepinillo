@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     background-color: rgba(26, 26, 26, 0);
-    margin: 15px;
+    margin: calc(0.5vh + 0.5vw);
     padding: 5px;
 }
 
@@ -12,30 +12,30 @@
     flex-wrap: wrap;
     align-items: center;
     background-color: rgba(26, 26, 26, 0.527);
-    margin: 15px;
-    padding: 5px;
+    margin: calc(0.4vh + 0.4vw);
+    padding: calc(0.4vh + 0.4vw);;
 }
 
 .ProjectoBox {
-    margin: 0px;
-    padding: 10px;
+
+    padding: calc(0.4vh + 0.4vw);
     height: 100%;
     width: auto;
     background-color: rgba(15, 15, 15, 0);
     display: flex;
     order: auto;
     justify-content: space-around;
-    border-radius: 20px;
+    border-radius: calc(0.4vh + 0.4vw);
 }
 
 .ProjectoContainer {
     background-color: rgba(15, 15, 15, 0.692);
-    margin: 10px;
+    margin: calc(0.5vh + 0.5vw);
     width: 48%;
-    height: fit-content;
+    height: calc(9vw + 9vh);
     order: auto;
     margin-left: auto;
-    border-radius: 20px;
+    border-radius: calc(0.4vh + 0.4vw);
 }
 
 
@@ -92,24 +92,24 @@
     display: flex;
     flex-direction: column;
     background-color: rgba(15, 15, 15, 0.63);
-    margin: 10px;
-    padding: 10px;
+    margin: calc(0.4vh + 0.4vw);
+    padding: calc(0.4vh + 0.4vw);
     width: 100%;
     height: 100%;
     justify-content: space-evenly;
     transition: width 0.5s;
     order:-1;
-    border-radius: 25px;
+    border-radius: calc(0.4vh + 0.4vw);
 }
 
 
 .ProjectoFotos {
-    border: 0.5px solid rgb(43, 43, 43);
+    border: calc(0.1vw + 0.1vh) solid rgb(43, 43, 43);
     display: grid;
-    grid-template-rows: 90px 90px ;
-    grid-template-columns: 90px 90px ;
-    grid-auto-rows: 90px; 
-    grid-auto-columns: 90px; 
+    grid-template-rows: calc(3vw + 3vh) calc(3vw + 3vh) ;
+    grid-template-columns: calc(3vw + 3vh) calc(3vw + 3vh) ;
+    grid-auto-rows: calc(3vw + 3vh); 
+    grid-auto-columns: calc(3vw + 3vh); 
     grid-auto-flow: row;
     height: fit-content;
 }
@@ -126,8 +126,6 @@
     color: rgb(118, 240, 240);
     width: 100%;
     font-family:'Roboto Mono', monospace;
-    font-size:small;
-    margin: 2px;
 }
 
 .ProjectoParrafo {
@@ -142,20 +140,20 @@
 }
 .ProjectoSubtitulo {
     text-align: center;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin-bottom: calc(0.3vw + 0.3vh);
+    margin-right: calc(0.3vw + 0.3vh);
     color: rgb(118, 240, 240);
     width: 100%;
     font-family:'Roboto Mono', monospace;
     text-shadow: 1px 1px 2px rgb(80, 91, 97);
-    font-size: calc(0.7vw + 0.7vh);
+    font-size: calc(0.8vw + 0.8vh);
 
 }
 
 .ProjectoTitulo {
-    margin-bottom: 3px;
-    margin-top: 3px;
-    padding: 1px;
+    margin-bottom: calc(0.4vw + 0.4vh);
+    margin-top: calc(0.4vw + 0.4vh);
+    padding: calc(0.1vw + 0.1vh);
     width: fit-content;
     color: rgb(163, 163, 163);
     text-shadow: 1px 1px 2px rgb(73, 57, 57);
@@ -224,7 +222,7 @@
     text-decoration: none;
     font-size:small;
 }
-
+/*
 @media (max-width: 1400px) {
 .ProjectoFotos {
 
@@ -372,7 +370,7 @@
         font-size:12px;
     }
 }
-
+/
 @media (max-width: 400px) {
     .ProjectoTexto {
         display: flex;
@@ -441,4 +439,29 @@
         text-decoration: none;
         font-size: 9px;
     }
+}
+    */
+
+@media (max-width: 500px) {
+    .ProjectoBox {
+
+        padding: calc(0.4vh + 0.4vw);
+        height: 100%;
+        width: auto;
+        background-color: rgba(15, 15, 15, 0);
+        display: flex;
+        order: auto;
+        justify-content: space-around;
+        border-radius: calc(0.4vh + 0.4vw);
+    }
+    .ProjectoContainer {
+        background-color: rgba(15, 15, 15, 0.692);
+        margin: calc(0.5vh + 0.5vw);
+        width: 100%;
+        height: calc(9vw + 9vh);
+        order: auto;
+        margin-left: auto;
+        border-radius: calc(0.4vh + 0.4vw);
+    }
+
 }
