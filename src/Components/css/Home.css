@@ -3,14 +3,14 @@
 
 .contenidoBox {
     background-color: rgba(26, 26, 26, 0);
-    margin: calc(0.6vw + 0.6vh);
+    margin: calc(0.4vw + 0.4vh);
     padding: calc(0.4vw + 0.4vh);
 }
 
 .ParrafoHome {
-    margin-bottom: calc(0.8vw + 0.8vh);
-    margin-top: calc(0.8vw + 0.8vh);
-    padding: calc(0.8vw + 0.8vh);
+    margin-bottom: calc(0.2vw + 0.2vh);
+    margin-top: calc(0.2vw + 0.2vh);
+    padding: calc(0.3vw + 0.3vh);
     color: rgb(118, 240, 240);
     background-color: rgba(15, 15, 15, 0);
     font-family:'Roboto Mono', monospace;

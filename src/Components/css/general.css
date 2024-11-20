@@ -41,13 +41,13 @@
 }
 
 .Portada {
-    margin: 50px;
+    margin: calc(2vh + 2vw);
 }
 
 .fotoPortada {
-    border-radius: 360px;
-    width: 300px;
-    border: rgb(43, 43, 43) solid 3px;
+    border-radius: calc(12vh + 12vw);
+    width: calc(12vh + 12vw);
+    border: rgb(43, 43, 43) solid calc(0.12vh + 0.12vw);
 }
 .Redes {
     display: flex;
@@ -58,18 +58,18 @@
 
 .Red {
     display: flex;
-    width: 120px;
+    width: calc(5.5vh + 5.5vw);
     color: rgb(255, 255, 255);
     text-decoration: none;
     background-color: rgb(66, 66, 66);
-    padding: 10px;
-    border-radius: 15px;
-    margin: 15px;
+    padding: calc(0.5vh + 0.5vw);
+    border-radius: calc(0.6vh + 0.6vw);
+    margin: calc(0.6vh + 0.6vw);
     align-items: center;
     transition: 0.3s;
     justify-content: space-between;
     font:icon;
-    font-size: large;
+    font-size: calc(0.82vh + 0.82vw);
 }
 
 .BotonDesplegeBoton {
@@ -108,7 +108,7 @@
 
 .Red:hover {
     display: flex;
-    width: 130px;
+    width: calc(6vh + 6vw);
     transition: 0.5s;
     background-color: rgb(207, 207, 207);
     color: rgb(0, 0, 0);
@@ -206,12 +206,6 @@
 .canvasContainer {
     position: sticky;
     top: 55vh;
-}
-
-
-@media (max-width: 1400px) {
-    
-    
 }
 
 @media (max-width: 1250px) {
