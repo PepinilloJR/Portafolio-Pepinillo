@@ -41,13 +41,16 @@
 }
 
 .Portada {
-    margin: calc(2vh + 2vw);
+    margin: calc(1vh + 1vw);
 }
 
 .fotoPortada {
-    border-radius: calc(12vh + 12vw);
+    border-radius: calc(35vh + 35vw);
     width: calc(12vh + 12vw);
+    height: calc(12vh + 12vw);
     border: rgb(43, 43, 43) solid calc(0.12vh + 0.12vw);
+    object-fit: cover;
+    object-position: center;
 }
 .Redes {
     display: flex;
@@ -249,8 +252,11 @@
     
     .fotoPortada {
         border-radius: 360px;
-        width: calc(10vw + 5vh);
-        border: rgb(43, 43, 43) solid 3px;
+        width: calc(12vh + 12vw);
+        height: calc(12vh + 12vw);
+        border: rgb(43, 43, 43) solid calc(0.12vh + 0.12vw);
+        object-fit: cover;
+        object-position: center;
     }
     .Redes {
         display: flex;
@@ -261,13 +267,13 @@
     
     .Red {
         display: flex;
-        width: calc(17vw + 5vh);
+        width: calc(16vw + 5vh);
         color: rgb(255, 255, 255);
         text-decoration: none;
         background-color: rgb(66, 66, 66);
         padding: calc(1vw + 1vh);
         border-radius: 2vw;
-        margin: 1.5vh;
+        margin: 1vh;
         align-items: center;
         transition: 0.3s;
         justify-content: space-between;

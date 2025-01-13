@@ -1,6 +1,6 @@
 import "./css/general.css"
 import { FaInstagram, FaGithub, FaSteam, FaTelegram, FaLastfm, FaHeart, FaLinkedin    } from "react-icons/fa";
-import imgSrc from '../archivos/drgonzo.png';
+import imgSrc from '../archivos/lainMatilda.jpg';
 import { useState } from "react";
 
 
