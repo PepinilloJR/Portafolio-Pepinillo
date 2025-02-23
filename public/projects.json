@@ -55,5 +55,22 @@
       {"link":"https://github.com/PepinilloJR/chatCMD", "desc":"ChatCMD"}
     ]
       
+    }, 
+    {
+      "title": "Excel Parser & Manager",
+      "text": "A frontend I developed for my university to manage late course registrations. ",
+      "desc":  [
+      "The system is very easy to use, although the backend is not available, so it must be recreated if intended for use.", 
+      { "img": "excel1.png"},
+      { "img": "excel2.png"},
+      "All the explanations are in the GitHub repository, but basically, it takes a spreadsheet file, parses it into objects that are manipulated in the GUI, and finally allows exporting a spreadsheet with the results, this functionality can be adapted for many other purposes."],
+      "images": [
+        {"img": "excel1.png", "gridRow": "1", "gridColumn": "1"}, 
+        {"img": "excel2.png", "gridRow": "1", "gridColumn": "2"},
+        {"img": "excel3.png", "gridRow": "2", "gridColumn": "1 / 3"}
+    ],"url": [
+      {"link":"https://github.com/PepinilloJR/front-inscripciones", "desc":"late course registrations frontend"}
+    ]
+      
     }
 ]}
