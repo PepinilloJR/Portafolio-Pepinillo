@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Portafolio-Pepinillo/static/css/main.528a2560.css",
-    "main.js": "/Portafolio-Pepinillo/static/js/main.cbb0309b.js",
+    "main.js": "/Portafolio-Pepinillo/static/js/main.905018d3.js",
     "static/media/spritesheet.png": "/Portafolio-Pepinillo/static/media/spritesheet.ea2e186f38b941aa3b17.png",
     "static/media/lainMatilda.jpg": "/Portafolio-Pepinillo/static/media/lainMatilda.dc40d4bd561018d15d1b.jpg",
     "static/media/bark.mp3": "/Portafolio-Pepinillo/static/media/bark.2793ffd0c5723935e237.mp3",
     "index.html": "/Portafolio-Pepinillo/index.html",
     "main.528a2560.css.map": "/Portafolio-Pepinillo/static/css/main.528a2560.css.map",
-    "main.cbb0309b.js.map": "/Portafolio-Pepinillo/static/js/main.cbb0309b.js.map"
+    "main.905018d3.js.map": "/Portafolio-Pepinillo/static/js/main.905018d3.js.map"
   },
   "entrypoints": [
     "static/css/main.528a2560.css",
-    "static/js/main.cbb0309b.js"
+    "static/js/main.905018d3.js"
   ]
 }
