@@ -58,7 +58,7 @@
     }, 
     {
       "title": "Excel Parser & Manager",
-      "text": "A frontend I developed for my university to manage late course registrations. ",
+      "text": "A frontend I built for my university to manage late registrations. ",
       "desc":  [
       "The system is very easy to use, although the backend is not available, so it must be recreated if intended for use.", 
       { "img": "excel1.png"},
